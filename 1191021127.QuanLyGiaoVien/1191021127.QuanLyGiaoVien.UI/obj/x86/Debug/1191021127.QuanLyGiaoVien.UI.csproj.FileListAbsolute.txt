@@ -1,0 +1,10 @@
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\bin\Debug\1191021127.QuanLyGiaoVien.UI.exe
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\bin\Debug\1191021127.QuanLyGiaoVien.UI.pdb
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\bin\Debug\1191021127.QuanLyGiaoVien.Domain.dll
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\bin\Debug\1191021127.QuanLyGiaoVien.Domain.pdb
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Properties.Resources.resources
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.exe
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.pdb
