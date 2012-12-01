@@ -1,0 +1,5 @@
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\bin\Debug\1191021127.QuanLyGiaoVien.Domain.dll
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\bin\Debug\1191021127.QuanLyGiaoVien.Domain.pdb
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\ResolveAssemblyReference.cache
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\1191021127.QuanLyGiaoVien.Domain.dll
+c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\1191021127.QuanLyGiaoVien.Domain.pdb
