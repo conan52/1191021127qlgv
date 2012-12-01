@@ -52,17 +52,17 @@
     <Compile Include="Common\CapNhapGiaoVien.Designer.cs">
       <DependentUpon>CapNhapGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\ThongKeChucDanh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\ThongKeChucDanh.Designer.cs">
-      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
-    </Compile>
     <Compile Include="Common\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChonGiaoVienPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonGiaoVienPhanCong.Designer.cs">
+      <DependentUpon>ChonGiaoVienPhanCong.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\IN.cs">
       <SubType>Form</SubType>
@@ -76,22 +76,40 @@
     <Compile Include="Common\ThemGiaoVien.Designer.cs">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\ThongKeChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ThongKeChucDanh.Designer.cs">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\XoaGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\XoaGiaoVien.Designer.cs">
       <DependentUpon>XoaGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhanCongGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongGiaoVien.Designer.cs">
+      <DependentUpon>PhanCongGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimKiemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemGiaoVien.Designer.cs">
+      <DependentUpon>TimKiemGiaoVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Common\CapNhapGiaoVien.resx">
       <DependentUpon>CapNhapGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Common\ThongKeChucDanh.resx">
-      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Common\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChonGiaoVienPhanCong.resx">
+      <DependentUpon>ChonGiaoVienPhanCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\IN.resx">
       <DependentUpon>IN.cs</DependentUpon>
@@ -99,8 +117,14 @@
     <EmbeddedResource Include="Common\ThemGiaoVien.resx">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\ThongKeChucDanh.resx">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\XoaGiaoVien.resx">
       <DependentUpon>XoaGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanCongGiaoVien.resx">
+      <DependentUpon>PhanCongGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TimKiemGiaoVien.resx">
+      <DependentUpon>TimKiemGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
