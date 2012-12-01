@@ -16,7 +16,7 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhap());
+            Application.Run(new Main());
         }
     }
 }

@@ -1,0 +1,24 @@
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.CapNhapGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.DangNhap.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.TimKiemGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.IN.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.ThemGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.XoaGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.PhanCongGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\Desktop\2M\New Folder\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Main.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.CapNhapGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.DangNhap.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.TimKiemGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.IN.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.ThemGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.XoaGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Main.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.PhanCongGiaoVien.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_1\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.write.1.tlog
