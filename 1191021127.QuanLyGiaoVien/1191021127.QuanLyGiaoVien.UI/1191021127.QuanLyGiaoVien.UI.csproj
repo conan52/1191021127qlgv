@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CapNhapGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\CapNhapGiaoVien.Designer.cs">
+      <DependentUpon>CapNhapGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ThongKeChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ThongKeChucDanh.Designer.cs">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\IN.Designer.cs">
+      <DependentUpon>IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ThemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ThemGiaoVien.Designer.cs">
+      <DependentUpon>ThemGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\XoaGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\XoaGiaoVien.Designer.cs">
+      <DependentUpon>XoaGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\CapNhapGiaoVien.resx">
+      <DependentUpon>CapNhapGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ThongKeChucDanh.resx">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\IN.resx">
+      <DependentUpon>IN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ThemGiaoVien.resx">
+      <DependentUpon>ThemGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\XoaGiaoVien.resx">
+      <DependentUpon>XoaGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

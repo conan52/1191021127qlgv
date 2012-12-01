@@ -8,3 +8,5 @@ c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVi
 c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.exe
 c:\users\nghiatran\documents\visual studio 2010\Projects\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.pdb
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_GV\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.exe
+C:\Documents and Settings\Administrator\Desktop\2M\SVN_GV\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.pdb
