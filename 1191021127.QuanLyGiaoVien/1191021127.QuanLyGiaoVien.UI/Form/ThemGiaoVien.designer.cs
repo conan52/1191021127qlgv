@@ -50,11 +50,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbChucDanh = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.cbBoMon = new System.Windows.Forms.ComboBox();
             this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.chucDanhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cbChucDanh = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource)).BeginInit();
@@ -195,7 +195,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(133, 411);
+            this.button2.Location = new System.Drawing.Point(59, 428);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;
@@ -207,7 +207,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(250, 411);
+            this.button3.Location = new System.Drawing.Point(210, 428);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -253,6 +253,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
             // 
+            // cbChucDanh
+            // 
+            this.cbChucDanh.FormattingEnabled = true;
+            this.cbChucDanh.Location = new System.Drawing.Point(104, 205);
+            this.cbChucDanh.Name = "cbChucDanh";
+            this.cbChucDanh.Size = new System.Drawing.Size(211, 21);
+            this.cbChucDanh.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label10.Location = new System.Drawing.Point(12, 208);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Chức danh";
+            // 
             // cbBoMon
             // 
             this.cbBoMon.FormattingEnabled = true;
@@ -272,24 +290,6 @@
             // chucDanhBindingSource1
             // 
             this.chucDanhBindingSource1.DataMember = "ChucDanh";
-            // 
-            // cbChucDanh
-            // 
-            this.cbChucDanh.FormattingEnabled = true;
-            this.cbChucDanh.Location = new System.Drawing.Point(104, 205);
-            this.cbChucDanh.Name = "cbChucDanh";
-            this.cbChucDanh.Size = new System.Drawing.Size(211, 21);
-            this.cbChucDanh.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(12, 208);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Chức danh";
             // 
             // ThemGiaoVien
             // 

@@ -31,9 +31,9 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
         private void xóaHồSơGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new XoaGiaoVien();
-            f.MdiParent = this;
-            f.Show();
+            //Form f = new XoaGiaoVien();
+           // f.MdiParent = this;
+           // f.Show();
         }
 
         private void cậpNhậtHồSơGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
