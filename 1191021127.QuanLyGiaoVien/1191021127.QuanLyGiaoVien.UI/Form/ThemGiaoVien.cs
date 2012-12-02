@@ -29,7 +29,17 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
 
         private void button2_Click(object sender, EventArgs e)
         {
-            db.SubmitChanges();
+            try{
+                GiaoVien giaoVien = new GiaoVien();
+                giaoVien.HoTen = txtHoTen.Text;
+                giaoVien.GioiTinh = cbGioiTinh.SelectedText;
+                giaoVien.NgaySinh = DateTime.Now;
+                giaoVien.Email = txtEmail.Text;
+                giaoVien.SoDienThoai = Int32.Parse(txtSoDienThoai.Text);
+                giaoVien.LuongCoBan = Int32.Parse(txtLuongCoBan.Text);
+                giaoVien.MaBoMon = Int32.Parse(cbBoMon.SelectedValue.ToString());
+                giaoVien.TrangThai = true;
+                db.SubmitChanges();
                 db.GiaoViens.InsertOnSubmit(giaoVien);
                 db.SubmitChanges();
 
@@ -50,7 +60,7 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
                 MessageBox.Show("Qúa trình thêm thành công!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
-            catch (Exception  )
+            catch (Exception )
             {
                 MessageBox.Show("Qúa trình thêm thất bại!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
