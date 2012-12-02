@@ -110,7 +110,7 @@
             // PhanCongGVToolStripMenuItem
             // 
             this.PhanCongGVToolStripMenuItem.Name = "PhanCongGVToolStripMenuItem";
-            this.PhanCongGVToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.PhanCongGVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PhanCongGVToolStripMenuItem.Text = "Phân công";
             this.PhanCongGVToolStripMenuItem.Click += new System.EventHandler(this.thôngTinGiáoViênToolStripMenuItem_Click);
             // 
@@ -153,7 +153,7 @@
             this.ThongKeTheoHocViToolStripMenuItem,
             this.ThongKeTheoBoMonToolStripMenuItem});
             this.ThongKeToolStripMenuItem.Name = "ThongKeToolStripMenuItem";
-            this.ThongKeToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.ThongKeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ThongKeToolStripMenuItem.Text = "Giao Viên";
             // 
             // ThongKeTheoHocViToolStripMenuItem
@@ -174,6 +174,7 @@
             // 
             this.TinhLuongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.XuatLuongGVToolStripMenuItem});
+            this.TinhLuongToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Desktop;
             this.TinhLuongToolStripMenuItem.Name = "TinhLuongToolStripMenuItem";
             this.TinhLuongToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
             this.TinhLuongToolStripMenuItem.Text = "Tính Lương";
@@ -187,6 +188,7 @@
             // 
             // ThoatToolStripMenuItem
             // 
+            this.ThoatToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Desktop;
             this.ThoatToolStripMenuItem.Name = "ThoatToolStripMenuItem";
             this.ThoatToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.ThoatToolStripMenuItem.Text = "Thoát";
