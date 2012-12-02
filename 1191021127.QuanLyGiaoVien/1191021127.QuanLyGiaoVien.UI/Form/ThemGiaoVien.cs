@@ -17,8 +17,8 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
         {
             InitializeComponent();
         }
-        QLGVEntities data = new QLGVEntities();
-        DBEntitiesDataContext db = new DBEntitiesDataContext();
+      //  QLGVEntities data = new QLGVEntities();
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -69,6 +69,7 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
 
         private void button2_Click(object sender, EventArgs e)
         {
+           DBStoreDataContext  db = new DBStoreDataContext();
             GiaoVien giaoVien = new GiaoVien();
             giaoVien.HoTen = "Trần Đại Nghĩa";
             giaoVien.GioiTinh = "Nam";
@@ -79,15 +80,9 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
             giaoVien.LuongCoBan = 3999;
             giaoVien.MaBoMon = 1;
             giaoVien.TrangThai = true;
-            try
-            {
-                //db.GiaoViens.InsertOnSubmit(giaoVien);
-                db.SubmitChanges();
-            }
-            catch (Exception ec)
-            {
-                throw ec;
-            }
+
+            db.GiaoViens.InsertOnSubmit(giaoVien);
+            db.SubmitChanges();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyGiaoVien" Class="DBEntitiesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyGiaoVien" Class="DBStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=NGHIATRAN-PC;Initial Catalog=QuanLyGiaoVien;Integrated Security=True" SettingsObjectName="_1191021127.QuanLyGiaoVien.Domain.Properties.Settings" SettingsPropertyName="QuanLyGiaoVienConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BoMon" Member="BoMons">
     <Type Name="BoMon">
