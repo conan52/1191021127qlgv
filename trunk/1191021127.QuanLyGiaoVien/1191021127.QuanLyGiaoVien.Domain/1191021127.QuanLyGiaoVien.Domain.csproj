@@ -41,9 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBStore.cs">
-      <DependentUpon>DBStore.dbml</DependentUpon>
-    </Compile>
     <Compile Include="DBStore.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,7 +54,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.Config" />
+    <None Include="app.config" />
     <None Include="DBStore.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DBStore.designer.cs</LastGenOutput>

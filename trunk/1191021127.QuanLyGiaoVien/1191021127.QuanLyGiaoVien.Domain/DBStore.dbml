@@ -21,6 +21,15 @@
       <Association Name="NhomUser_User" Member="NhomUser" ThisKey="MaNhom" OtherKey="MaNhom" Type="NhomUser" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.ChiTietChucVuGV" Member="ChiTietChucVuGVs">
+    <Type Name="ChiTietChucVuGV">
+      <Column Name="MaGV" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaChucVu" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ChucVu_ChiTietChucVuGV" Member="ChucVu" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="ChucVu" IsForeignKey="true" />
+      <Association Name="GiaoVien_ChiTietChucVuGV" Member="GiaoVien" ThisKey="MaGV" OtherKey="MaGiaoVien" Type="GiaoVien" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.ChucDanh" Member="ChucDanhs">
     <Type Name="ChucDanh">
       <Column Name="MaChucDanh" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -39,6 +48,13 @@
       <Association Name="GiaoVien_ChucDanh_GiaoVien" Member="GiaoVien" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="GiaoVien" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.ChucVu" Member="ChucVus">
+    <Type Name="ChucVu">
+      <Column Name="MaChucVu" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenChucVu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ChucVu_ChiTietChucVuGV" Member="ChiTietChucVuGVs" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="ChiTietChucVuGV" />
+    </Type>
+  </Table>
   <Table Name="dbo.GiaoVien" Member="GiaoViens">
     <Type Name="GiaoVien">
       <Column Name="MaGiaoVien" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -51,6 +67,7 @@
       <Column Name="LuongCoBan" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="MaBoMon" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="GiaoVien_ChiTietChucVuGV" Member="ChiTietChucVuGVs" ThisKey="MaGiaoVien" OtherKey="MaGV" Type="ChiTietChucVuGV" />
       <Association Name="GiaoVien_ChucDanh_GiaoVien" Member="ChucDanh_GiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="ChucDanh_GiaoVien" />
       <Association Name="GiaoVien_PhanCongGiaoVien" Member="PhanCongGiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="PhanCongGiaoVien" />
       <Association Name="BoMon_GiaoVien" Member="BoMon" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="BoMon" IsForeignKey="true" />
