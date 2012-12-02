@@ -48,12 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewGV = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -251,48 +245,11 @@
             // 
             this.dataGridViewGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.HoTen,
-            this.GioiTinh,
-            this.ChucVu,
-            this.BoMon,
-            this.Email});
             this.dataGridViewGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewGV.Location = new System.Drawing.Point(3, 19);
             this.dataGridViewGV.Name = "dataGridViewGV";
             this.dataGridViewGV.Size = new System.Drawing.Size(562, 224);
             this.dataGridViewGV.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Mã GV";
-            this.ID.Name = "ID";
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Họ Tên";
-            this.HoTen.Name = "HoTen";
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.HeaderText = "Giới Tính";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // ChucVu
-            // 
-            this.ChucVu.HeaderText = "Chức Vụ";
-            this.ChucVu.Name = "ChucVu";
-            // 
-            // BoMon
-            // 
-            this.BoMon.HeaderText = "Bộ Môn";
-            this.BoMon.Name = "BoMon";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
             // 
             // button2
             // 
@@ -303,6 +260,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Đóng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TimKiemGiaoVien
             // 
@@ -349,11 +307,5 @@
         private System.Windows.Forms.CheckBox checkBoxHocVi;
         private System.Windows.Forms.CheckBox checkboxMaGV;
         private System.Windows.Forms.DataGridView dataGridViewGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BoMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
