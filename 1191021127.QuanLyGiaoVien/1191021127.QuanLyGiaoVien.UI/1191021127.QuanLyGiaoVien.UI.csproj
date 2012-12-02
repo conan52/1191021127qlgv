@@ -94,10 +94,6 @@
     <Compile Include="Form\ThemGiaoVien.designer.cs">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThongKeChucDanh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\ThongKeChucDanh.Designer.cs" />
     <Compile Include="Form\XoaGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +116,12 @@
     <Compile Include="Form\ThongKeTheoBoMon.Designer.cs">
       <DependentUpon>ThongKeTheoBoMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\ThongKeChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongKeChucDanh.Designer.cs">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\CapNhatGiaoVien.resx">
       <DependentUpon>CapNhatGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PhanCongGiaoVien.resx">
       <DependentUpon>PhanCongGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKeChucDanh.resx">
+      <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKeTheoBoMon.resx">
+      <DependentUpon>ThongKeTheoBoMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\TimKiemGiaoVien.resx">
       <DependentUpon>TimKiemGiaoVien.cs</DependentUpon>
@@ -156,7 +164,6 @@
     <EmbeddedResource Include="Form\ThemGiaoVien.resx">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongKeChucDanh.resx" />
     <EmbeddedResource Include="Form\XoaGiaoVien.resx" />
     <None Include="App.Config" />
     <None Include="ClassDiagram1.cd" />
