@@ -44,10 +44,6 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
             db.SubmitChanges();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void ThemGiaoVien_Load(object sender, EventArgs e)
         {

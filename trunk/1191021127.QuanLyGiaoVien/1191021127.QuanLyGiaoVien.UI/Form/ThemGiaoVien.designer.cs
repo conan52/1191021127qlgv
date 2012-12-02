@@ -260,7 +260,6 @@
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(211, 21);
             this.cbChucVu.TabIndex = 16;
-            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
