@@ -80,5 +80,16 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
 
         }
+
+        private void xuấtLươngGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuatLuongGV xl = new XuatLuongGV();
+            xl.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
