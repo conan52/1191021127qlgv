@@ -103,5 +103,12 @@ namespace _1191021127.QuanLyGiaoVien.UI
             f.MdiParent = this;
             f.Show();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Form dangNhap = new DangNhap();
+            dangNhap.MdiParent = this;
+            dangNhap.Show();
+        }
     }
 }

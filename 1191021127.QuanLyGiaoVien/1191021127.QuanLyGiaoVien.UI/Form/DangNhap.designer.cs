@@ -28,52 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbTenDangNhap = new System.Windows.Forms.TextBox();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.txtDangNhap = new System.Windows.Forms.Button();
+            this.btDangNhap = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // linkLabel2
+            // tbTenDangNhap
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(12, 133);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(114, 14);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Quên tên đăng nhập...";
+            this.tbTenDangNhap.Location = new System.Drawing.Point(138, 60);
+            this.tbTenDangNhap.Name = "tbTenDangNhap";
+            this.tbTenDangNhap.Size = new System.Drawing.Size(186, 20);
+            this.tbTenDangNhap.TabIndex = 7;
             // 
-            // linkLabel1
+            // tbMatKhau
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(12, 116);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(88, 14);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu...";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(138, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 20);
-            this.textBox2.TabIndex = 8;
+            this.tbMatKhau.Location = new System.Drawing.Point(138, 86);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(186, 20);
+            this.tbMatKhau.TabIndex = 8;
             // 
             // linkLabel3
             // 
@@ -99,29 +75,31 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Mật khẩu:";
             // 
-            // txtDangNhap
+            // btDangNhap
             // 
-            this.txtDangNhap.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtDangNhap.ForeColor = System.Drawing.Color.Blue;
-            this.txtDangNhap.Location = new System.Drawing.Point(167, 130);
-            this.txtDangNhap.Name = "txtDangNhap";
-            this.txtDangNhap.Size = new System.Drawing.Size(75, 23);
-            this.txtDangNhap.TabIndex = 11;
-            this.txtDangNhap.Text = "Đăng nhập";
-            this.txtDangNhap.UseVisualStyleBackColor = false;
+            this.btDangNhap.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btDangNhap.ForeColor = System.Drawing.Color.Blue;
+            this.btDangNhap.Location = new System.Drawing.Point(78, 129);
+            this.btDangNhap.Name = "btDangNhap";
+            this.btDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btDangNhap.TabIndex = 11;
+            this.btDangNhap.Text = "Đăng nhập";
+            this.btDangNhap.UseVisualStyleBackColor = false;
+            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(248, 129);
+            this.button2.Location = new System.Drawing.Point(201, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -142,13 +120,11 @@
             this.ClientSize = new System.Drawing.Size(364, 170);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtDangNhap);
+            this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.tbMatKhau);
+            this.Controls.Add(this.tbTenDangNhap);
             this.Name = "DangNhap";
             this.Text = "Màn Hình Đăng Nhập";
             this.Load += new System.EventHandler(this.DangNhap_Load);
@@ -159,13 +135,11 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbTenDangNhap;
+        private System.Windows.Forms.TextBox tbMatKhau;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.Button txtDangNhap;
+        private System.Windows.Forms.Button btDangNhap;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
     }

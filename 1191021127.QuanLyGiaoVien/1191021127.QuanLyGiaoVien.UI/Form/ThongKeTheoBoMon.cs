@@ -62,5 +62,10 @@ namespace _1191021127.QuanLyGiaoVien.UI
             }
             dgBoMon.DataSource = lGVView;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

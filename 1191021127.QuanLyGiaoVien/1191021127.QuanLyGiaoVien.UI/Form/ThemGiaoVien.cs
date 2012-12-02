@@ -111,10 +111,13 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
         {
             ArrayList array = new ArrayList { "Nam", "Nữ" };
             cbGioiTinh.DataSource = array;
+
             Table<ChucDanh> chucDanhs = db.GetTable<ChucDanh>();
             cbChucDanh.DataSource = chucDanhs;
+
             Table<ChucVu> chucVus = db.GetTable<ChucVu>();
             cbChucVu.DataSource = chucVus;
+
             Table<BoMon> boMons = db.GetTable<BoMon>();
             cbBoMon.DataSource = boMons;
         }
