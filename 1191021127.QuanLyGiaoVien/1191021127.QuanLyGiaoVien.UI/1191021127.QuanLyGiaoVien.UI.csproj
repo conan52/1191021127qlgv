@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0AE1016-9505-4441-9246-01A0ED91A9A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_1191021127.QuanLyGiaoVien.UI</RootNamespace>
+    <AssemblyName>1191021127.QuanLyGiaoVien.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\CapNhatGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CapNhatGiaoVien.designer.cs">
+      <DependentUpon>CapNhatGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ChonPhanCongGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ChonPhanCongGiaoVien.designer.cs">
+      <DependentUpon>ChonPhanCongGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DangNhap.designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IN.designer.cs">
+      <DependentUpon>IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PhanCongGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PhanCongGiaoVien.designer.cs">
+      <DependentUpon>PhanCongGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\ThemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThemGiaoVien.designer.cs">
+      <DependentUpon>ThemGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongKeChucDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongKeChucDanh.Designer.cs" />
+    <Compile Include="Form\TimKiemGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TimKiemGiaoVien.Designer.cs" />
+    <Compile Include="Form\XoaGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\XoaGiaoVien.Designer.cs" />
+    <Compile Include="QLGVEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGVEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyGiaoVienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\CapNhatGiaoVien.resx">
+      <DependentUpon>CapNhatGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ChonPhanCongGiaoVien.resx">
+      <DependentUpon>ChonPhanCongGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\IN.resx">
+      <DependentUpon>IN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PhanCongGiaoVien.resx">
+      <DependentUpon>PhanCongGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\ThemGiaoVien.resx">
+      <DependentUpon>ThemGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongKeChucDanh.resx" />
+    <EmbeddedResource Include="Form\TimKiemGiaoVien.resx" />
+    <EmbeddedResource Include="Form\XoaGiaoVien.resx" />
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\QLGVEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="QLGVEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLGVEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLyGiaoVienDataSet.xsc">
+      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyGiaoVienDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyGiaoVienDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyGiaoVienDataSet.xss">
+      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\1191021127.QuanLyGiaoVien.Domain\1191021127.QuanLyGiaoVien.Domain.csproj">
+      <Project>{C895ECA9-589D-4939-9E3F-F0D3EDD8587B}</Project>
+      <Name>1191021127.QuanLyGiaoVien.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
