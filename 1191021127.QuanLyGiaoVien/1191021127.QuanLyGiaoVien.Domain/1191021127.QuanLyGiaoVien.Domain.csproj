@@ -57,6 +57,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.Config" />
     <None Include="DBStore.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DBStore.designer.cs</LastGenOutput>
