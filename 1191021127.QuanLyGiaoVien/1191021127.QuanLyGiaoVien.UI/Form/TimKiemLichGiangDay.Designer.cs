@@ -32,10 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgPhanCong = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbMaGiaoVien = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.cbGV = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPhanCong)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +42,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(704, 43);
+            this.button2.Location = new System.Drawing.Point(538, 33);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 33);
             this.button2.TabIndex = 23;
@@ -82,15 +80,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách lịch giảng dạy";
             // 
-            // cbMaGiaoVien
-            // 
-            this.cbMaGiaoVien.FormattingEnabled = true;
-            this.cbMaGiaoVien.Location = new System.Drawing.Point(105, 43);
-            this.cbMaGiaoVien.Name = "cbMaGiaoVien";
-            this.cbMaGiaoVien.Size = new System.Drawing.Size(134, 21);
-            this.cbMaGiaoVien.TabIndex = 20;
-            this.cbMaGiaoVien.SelectedIndexChanged += new System.EventHandler(this.cbMaGiaoVien_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -101,24 +90,14 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Mã giáo viên";
             // 
-            // label3
+            // cbGV
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(259, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Tên giáo viên";
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BackColor = System.Drawing.SystemColors.Info;
-            this.txtHoTen.Enabled = false;
-            this.txtHoTen.Location = new System.Drawing.Point(349, 46);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(293, 20);
-            this.txtHoTen.TabIndex = 25;
+            this.cbGV.FormattingEnabled = true;
+            this.cbGV.Location = new System.Drawing.Point(106, 40);
+            this.cbGV.Name = "cbGV";
+            this.cbGV.Size = new System.Drawing.Size(252, 21);
+            this.cbGV.TabIndex = 26;
+            this.cbGV.SelectedIndexChanged += new System.EventHandler(this.cbGV_SelectedIndexChanged);
             // 
             // TimKiemLichGiangDay
             // 
@@ -126,12 +105,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(806, 402);
-            this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbGV);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cbMaGiaoVien);
             this.Controls.Add(this.label1);
             this.Name = "TimKiemLichGiangDay";
             this.Text = "TimKiemLichGiangDay";
@@ -149,9 +126,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgPhanCong;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbMaGiaoVien;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.ComboBox cbGV;
     }
 }

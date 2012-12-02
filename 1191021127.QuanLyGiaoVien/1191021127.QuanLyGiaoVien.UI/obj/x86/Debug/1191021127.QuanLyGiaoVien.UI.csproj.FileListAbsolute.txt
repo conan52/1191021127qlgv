@@ -8,7 +8,6 @@ C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\11910211
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.ChonPhanCongGiaoVien.resources
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Common.DangNhap.resources
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.Main.resources
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.PhanCongGiaoVien.resources
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.ThongKeChucDanh.resources
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.ThongKeTheoBoMon.resources
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.TimKiemGiaoVien.resources

@@ -27,10 +27,8 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             //Load danh sách mã giáo viên cần thống kê
             Table<GiaoVien> giaoViens = db.GetTable<GiaoVien>();
-            cbMaGiaoVien.DataSource = giaoViens;
-            cbMaGiaoVien.DisplayMember = "MaGiaoVien" ;
-            cbMaGiaoVien.ValueMember   = "MaGiaoVien";
-            TimKiemLichDayGiaoVien();
+            cbGV.DataSource = giaoViens;
+           // TimKiemLichDayGiaoVien();
         }
 
         private void cbMaGiaoVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,18 +39,23 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
         private void TimKiemLichDayGiaoVien()
         {
-            List<PhanCongGiaoVien> lstgv = null;
-            long pMaGiaoVien = Int32.Parse(cbMaGiaoVien.SelectedValue.ToString());
-            if (cbMaGiaoVien.SelectedValue != null)
-            {
-                if (lstgv == null)
-                    lstgv = db.PhanCongGiaoViens.ToList<PhanCongGiaoVien>();
-                GiaoVien gv = db.GiaoViens.Where(x => x.MaGiaoVien == pMaGiaoVien).FirstOrDefault();
-                txtHoTen.Text = gv.HoTen.ToString();
-                lstgv.Clear();
-                lstgv = db.PhanCongGiaoViens.ToList<PhanCongGiaoVien>().Where(x => x.MaGiaoVien == gv.MaGiaoVien).ToList<PhanCongGiaoVien>(); ;
-                dgPhanCong.DataSource = lstgv;
-            }
+            //if (cbMaGiaoVien.SelectedValue != null)
+            //{
+            //    List<PhanCongGiaoVien> lstgv = null;
+            //    GiaoVien gvx = (GiaoVien)cbMaGiaoVien.SelectedValue;
+ 
+            //    txtHoTen.Text = gvx.HoTen;
+
+            //    lstgv = db.PhanCongGiaoViens.ToList<PhanCongGiaoVien>().Where(x => x.MaGiaoVien == gvx.MaGiaoVien).ToList<PhanCongGiaoVien>(); ;
+            //    dgPhanCong.DataSource = lstgv;
+            //}
+        }
+
+        private void cbGV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GiaoVien gvx = (GiaoVien)cbGV.SelectedValue;
+            List<PhanCongGiaoVien> lstgv = db.PhanCongGiaoViens.ToList<PhanCongGiaoVien>().Where(x => x.MaGiaoVien == gvx.MaGiaoVien).ToList<PhanCongGiaoVien>();
+            dgPhanCong.DataSource = lstgv;
         }
     }
 }

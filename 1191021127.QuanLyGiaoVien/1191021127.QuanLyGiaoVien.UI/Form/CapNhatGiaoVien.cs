@@ -110,17 +110,20 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             GiaoVien gv = new GiaoVien();
             gv = GetInfoGiaoVien (Int32.Parse(cbHoTen.SelectedValue.ToString()));
+
             dtNgaySinh.Text = gv.NgaySinh.ToString();
             cbGioiTinh.Text = gv.GioiTinh;
             txtEmail.Text = gv.Email;
             txtSoDienThoai.Text = gv.SoDienThoai.ToString();
             txtLuongCoBan.Text = gv.LuongCoBan.ToString();
 
-            ChucVu cv = GetInfoChucVu(Int32.Parse(cbHoTen.SelectedValue.ToString()));
-            cbChucVu.DataSource = cv;
-            ChucDanh cd = GetInfoChucDanh(Int32.Parse(cbHoTen.SelectedValue.ToString()));
-            cbChucDanh.DataSource = cd;
-            BoMon bm = GetInfoBoMon(Int32.Parse(cbHoTen.SelectedValue.ToString()));
+
+            ChiTietChucVuGV cv = db.ChiTietChucVuGVs.Where(x => x.MaGV == gv.MaGiaoVien).FirstOrDefault();
+            cbChucVu.SelectedItem = cv.ChucVu;
+            ChucDanh_GiaoVien cd = gv.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == gv.MaGiaoVien).FirstOrDefault();
+
+            cbChucDanh.SelectedItem = cd.ChucDanh;
+            BoMon bm = gv.BoMon;
             cbBoMon.DataSource = bm;
 
 
