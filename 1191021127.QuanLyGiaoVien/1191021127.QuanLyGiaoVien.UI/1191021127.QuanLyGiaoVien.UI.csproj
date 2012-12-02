@@ -138,6 +138,9 @@
     <EmbeddedResource Include="Form\TimKiemGiaoVien.resx">
       <DependentUpon>TimKiemGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\TimKiemLichGiangDay.resx">
+      <DependentUpon>TimKiemLichGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\XuatLuongGV.resx">
       <DependentUpon>XuatLuongGV.cs</DependentUpon>
     </EmbeddedResource>
