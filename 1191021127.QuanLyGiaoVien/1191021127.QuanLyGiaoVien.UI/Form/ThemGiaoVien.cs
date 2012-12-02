@@ -29,25 +29,47 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GiaoVien giaoVien = new GiaoVien();
-            giaoVien.HoTen = "Trần Đại Nghĩa";
-            giaoVien.GioiTinh = "Nam";
-            giaoVien.NgaySinh = DateTime.Now;
-            giaoVien.Email = "trandainghia@gmail.com";
-            giaoVien.SoDienThoai = 0987429755;
-            giaoVien.LuongCoBan = 3999;
-            giaoVien.MaBoMon = 1;
-            giaoVien.TrangThai = true;
-
-            db.GiaoViens.InsertOnSubmit(giaoVien);
             db.SubmitChanges();
+                db.GiaoViens.InsertOnSubmit(giaoVien);
+                db.SubmitChanges();
+
+                ChiTietChucVuGV chiTiet = new ChiTietChucVuGV();
+                long pMaGiaoVien = db.GiaoViens.Count();
+                chiTiet.MaChucVu = Int32.Parse(cbChucVu.SelectedValue.ToString());
+                chiTiet.MaGV = pMaGiaoVien;
+
+                db.ChiTietChucVuGVs.InsertOnSubmit(chiTiet);
+                db.SubmitChanges();
+
+                ChucDanh_GiaoVien chiTiet2 = new ChucDanh_GiaoVien();                
+                chiTiet2.MaChucDanh = Int32.Parse(cbChucDanh.SelectedValue.ToString());
+                chiTiet.MaGV = pMaGiaoVien;
+
+                db.ChucDanh_GiaoViens.InsertOnSubmit(chiTiet2);
+                db.SubmitChanges();
+                MessageBox.Show("Qúa trình thêm thành công!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+            }
+            catch (Exception  )
+            {
+                MessageBox.Show("Qúa trình thêm thất bại!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                
+            }
+
         }
 
 
         private void ThemGiaoVien_Load(object sender, EventArgs e)
         {
+            ArrayList array = new ArrayList { "Nam", "Nữ" };
+            cbGioiTinh.DataSource = array;
             Table<ChucDanh> chucDanhs = db.GetTable<ChucDanh>();
             cbChucVu.DataSource = chucDanhs;
+            Table<ChucVu> chucVus = db.GetTable<ChucVu>();
+            cbChucVu.DataSource = chucVus;
+            Table<BoMon> boMons = db.GetTable<BoMon>();
+            cbBoMon.DataSource = boMons;
         }
     }
 }
