@@ -41,13 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBEntities.cs">
-      <DependentUpon>DBEntities.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DBEntities.designer.cs">
+    <Compile Include="DBStore.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBEntities.dbml</DependentUpon>
+      <DependentUpon>DBStore.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -57,10 +54,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="DBEntities.dbml">
+    <None Include="DBStore.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DBEntities.designer.cs</LastGenOutput>
+      <LastGenOutput>DBStore.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -71,10 +67,9 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="DBEntities.dbml.layout">
-      <DependentUpon>DBEntities.dbml</DependentUpon>
+    <None Include="DBStore.dbml.layout">
+      <DependentUpon>DBStore.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

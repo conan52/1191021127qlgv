@@ -23,7 +23,7 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyGiaoVien")]
-	public partial class DBEntitiesDataContext : System.Data.Linq.DataContext
+	public partial class DBStoreDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -65,31 +65,31 @@ namespace _1191021127.QuanLyGiaoVien.Domain
     partial void DeletePhongBan(PhongBan instance);
     #endregion
 		
-		public DBEntitiesDataContext() : 
+		public DBStoreDataContext() : 
 				base(global::_1191021127.QuanLyGiaoVien.Domain.Properties.Settings.Default.QuanLyGiaoVienConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DBEntitiesDataContext(string connection) : 
+		public DBStoreDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DBEntitiesDataContext(System.Data.IDbConnection connection) : 
+		public DBStoreDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DBEntitiesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DBStoreDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DBEntitiesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DBStoreDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

@@ -15,12 +15,12 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             InitializeComponent();
         }
-        QLGVEntities data = new QLGVEntities();
+       // QLGVEntities data = new QLGVEntities();
         private void CapNhatGiaoVien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyGiaoVienDataSet.ChucDanh' table. You can move, or remove it, as needed.
             this.chucDanhTableAdapter.Fill(this.quanLyGiaoVienDataSet.ChucDanh);
-            chucDanhBindingSource.DataSource = data.ChucDanhs;
+            //chucDanhBindingSource.DataSource = data.ChucDanhs;
 
         }
 
