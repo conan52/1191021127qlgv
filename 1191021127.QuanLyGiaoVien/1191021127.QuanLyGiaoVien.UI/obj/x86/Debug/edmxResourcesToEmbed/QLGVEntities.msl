@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLGVModelStoreContainer" CdmEntityContainer="QLGVEntities">
+    <EntitySetMapping Name="BoMons">
+      <EntityTypeMapping TypeName="QLGVModel.BoMon">
+        <MappingFragment StoreEntitySet="BoMon">
+          <ScalarProperty Name="MaBoMon" ColumnName="MaBoMon" />
+          <ScalarProperty Name="TenBoMon" ColumnName="TenBoMon" />
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TrungTamDaoTao" ColumnName="TrungTamDaoTao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChucDanhs">
+      <EntityTypeMapping TypeName="QLGVModel.ChucDanh">
+        <MappingFragment StoreEntitySet="ChucDanh">
+          <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
+          <ScalarProperty Name="TenChucDanh" ColumnName="TenChucDanh" />
+          <ScalarProperty Name="LoaiChucDanh" ColumnName="LoaiChucDanh" />
+          <ScalarProperty Name="HeSoLuong" ColumnName="HeSoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChucDanh_GiaoVien">
+      <EntityTypeMapping TypeName="QLGVModel.ChucDanh_GiaoVien">
+        <MappingFragment StoreEntitySet="ChucDanh_GiaoVien">
+          <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
+          <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoViens">
+      <EntityTypeMapping TypeName="QLGVModel.GiaoVien">
+        <MappingFragment StoreEntitySet="GiaoVien">
+          <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="MaChucDanh" ColumnName="MaChucDanh" />
+          <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
+          <ScalarProperty Name="MaBoMon" ColumnName="MaBoMon" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Khoas">
+      <EntityTypeMapping TypeName="QLGVModel.Khoa">
+        <MappingFragment StoreEntitySet="Khoa">
+          <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+          <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LopHocs">
+      <EntityTypeMapping TypeName="QLGVModel.LopHoc">
+        <MappingFragment StoreEntitySet="LopHoc">
+          <ScalarProperty Name="MaLopHoc" ColumnName="MaLopHoc" />
+          <ScalarProperty Name="TenLopHoc" ColumnName="TenLopHoc" />
+          <ScalarProperty Name="SiSo" ColumnName="SiSo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonHocs">
+      <EntityTypeMapping TypeName="QLGVModel.MonHoc">
+        <MappingFragment StoreEntitySet="MonHoc">
+          <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+          <ScalarProperty Name="TenMonHoc" ColumnName="TenMonHoc" />
+          <ScalarProperty Name="SoTietLyThuyet" ColumnName="SoTietLyThuyet" />
+          <ScalarProperty Name="SoTietThucHanh" ColumnName="SoTietThucHanh" />
+          <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
+          <ScalarProperty Name="LoaiMonHoc" ColumnName="LoaiMonHoc" />
+          <ScalarProperty Name="MaBoMon" ColumnName="MaBoMon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhomUsers">
+      <EntityTypeMapping TypeName="QLGVModel.NhomUser">
+        <MappingFragment StoreEntitySet="NhomUser">
+          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
+          <ScalarProperty Name="TenNhom" ColumnName="TenNhom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhanCongGVs">
+      <EntityTypeMapping TypeName="QLGVModel.PhanCongGV">
+        <MappingFragment StoreEntitySet="PhanCongGiaoVien">
+          <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
+          <ScalarProperty Name="MaLopHoc" ColumnName="MaLopHoc" />
+          <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+          <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+          <ScalarProperty Name="ThoiGianDay" ColumnName="ThoiGianDay" />
+          <ScalarProperty Name="PhanCong" ColumnName="PhanCong" />
+          <ScalarProperty Name="HocKy" ColumnName="HocKy" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhongBans">
+      <EntityTypeMapping TypeName="QLGVModel.PhongBan">
+        <MappingFragment StoreEntitySet="PhongBan">
+          <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+          <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLGVModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QLGVModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="MaNhom" ColumnName="MaNhom" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1169,6 +1169,7 @@ namespace _1191021127.QuanLyGiaoVien.UI
             }
         }
         private Nullable<global::System.Boolean> _TrangThai;
+        public DateTime NgaySinh;
         partial void OnTrangThaiChanging(Nullable<global::System.Boolean> value);
         partial void OnTrangThaiChanged();
 
