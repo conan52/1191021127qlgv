@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _1191021127.QuanLyGiaoVien.UI.Properties {
+namespace _1191021127.QuanLyGiaoVien.Domain.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,21 +26,10 @@ namespace _1191021127.QuanLyGiaoVien.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NHANTRAN0983\\SQLEXPRESS;Initial Catalog=QuanLyGiaoVien;Integrated Sec" +
-            "urity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NGHIATRAN-PC;Initial Catalog=QuanLyGiaoVien;Integrated Security=True")]
         public string QuanLyGiaoVienConnectionString {
             get {
                 return ((string)(this["QuanLyGiaoVienConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NGHIATRAN-PC;Initial Catalog=QuanLyGiaoVien;Integrated Security=True")]
-        public string QuanLyGiaoVienConnectionString1 {
-            get {
-                return ((string)(this["QuanLyGiaoVienConnectionString1"]));
             }
         }
     }
