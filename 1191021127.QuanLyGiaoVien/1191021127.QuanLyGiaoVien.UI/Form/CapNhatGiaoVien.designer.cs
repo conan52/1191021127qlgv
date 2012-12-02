@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.chucDanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyGiaoVienDataSet = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -51,13 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chucDanhTableAdapter = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSetTableAdapters.ChucDanhTableAdapter();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox4
@@ -104,25 +95,12 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.chucDanhBindingSource, "MaChucDanh", true));
-            this.comboBox2.DataSource = this.chucDanhBindingSource;
-            this.comboBox2.DisplayMember = "TenChucDanh";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(114, 211);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(220, 21);
             this.comboBox2.TabIndex = 35;
             this.comboBox2.ValueMember = "MaChucDanh";
-            // 
-            // chucDanhBindingSource
-            // 
-            this.chucDanhBindingSource.DataMember = "ChucDanh";
-            this.chucDanhBindingSource.DataSource = this.quanLyGiaoVienDataSet;
-            // 
-            // quanLyGiaoVienDataSet
-            // 
-            this.quanLyGiaoVienDataSet.DataSetName = "QuanLyGiaoVienDataSet";
-            this.quanLyGiaoVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox2
             // 
@@ -275,35 +253,12 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Họ tên :";
             // 
-            // chucDanhTableAdapter
-            // 
-            this.chucDanhTableAdapter.ClearBeforeFill = true;
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(621, 25);
-            this.fillByToolStrip.TabIndex = 46;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(35, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
             // CapNhatGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(621, 442);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -312,12 +267,8 @@
             this.Name = "CapNhatGiaoVien";
             this.Text = "CapNhatGV";
             this.Load += new System.EventHandler(this.CapNhatGiaoVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,10 +296,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private QuanLyGiaoVienDataSet quanLyGiaoVienDataSet;
-        private System.Windows.Forms.BindingSource chucDanhBindingSource;
-        private QuanLyGiaoVienDataSetTableAdapters.ChucDanhTableAdapter chucDanhTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

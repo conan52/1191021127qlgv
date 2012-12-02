@@ -42,11 +42,7 @@
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
-            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.chucDanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyGiaoVienDataSet1 = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSet();
-            this.quanLyGiaoVienDataSet = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSet();
-            this.cbBoMon = new System.Windows.Forms.ComboBox();
             this.boMonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.boMonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtLuongCoBan = new System.Windows.Forms.TextBox();
@@ -54,17 +50,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.qLGVEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.boMonTableAdapter = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSetTableAdapters.BoMonTableAdapter();
             this.chucDanhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.chucDanhTableAdapter = new _1191021127.QuanLyGiaoVien.UI.QuanLyGiaoVienDataSetTableAdapters.ChucDanhTableAdapter();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLGVEntitiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +144,7 @@
             // 
             this.txtHoTen.Location = new System.Drawing.Point(104, 24);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(220, 20);
+            this.txtHoTen.Size = new System.Drawing.Size(211, 20);
             this.txtHoTen.TabIndex = 8;
             // 
             // dtNgaySinh
@@ -169,86 +161,39 @@
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Location = new System.Drawing.Point(104, 97);
             this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(117, 21);
+            this.cbGioiTinh.Size = new System.Drawing.Size(211, 21);
             this.cbGioiTinh.TabIndex = 10;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(104, 133);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(280, 20);
+            this.txtEmail.Size = new System.Drawing.Size(211, 20);
             this.txtEmail.TabIndex = 11;
             // 
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(104, 170);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(171, 20);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(211, 20);
             this.txtSoDienThoai.TabIndex = 12;
-            // 
-            // cbChucVu
-            // 
-            this.cbChucVu.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.chucDanhBindingSource, "MaChucDanh", true));
-            this.cbChucVu.DataSource = this.chucDanhBindingSource;
-            this.cbChucVu.DisplayMember = "TenChucDanh";
-            this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(104, 206);
-            this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(220, 21);
-            this.cbChucVu.TabIndex = 13;
-            this.cbChucVu.ValueMember = "MaChucDanh";
-            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.cbChucVu_SelectedIndexChanged);
             // 
             // chucDanhBindingSource
             // 
             this.chucDanhBindingSource.DataMember = "ChucDanh";
-            this.chucDanhBindingSource.DataSource = this.quanLyGiaoVienDataSet1;
-            // 
-            // quanLyGiaoVienDataSet1
-            // 
-            this.quanLyGiaoVienDataSet1.DataSetName = "QuanLyGiaoVienDataSet";
-            this.quanLyGiaoVienDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // quanLyGiaoVienDataSet
-            // 
-            this.quanLyGiaoVienDataSet.DataSetName = "QuanLyGiaoVienDataSet";
-            this.quanLyGiaoVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbBoMon
-            // 
-            this.cbBoMon.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.boMonBindingSource1, "MaBoMon", true));
-            this.cbBoMon.DataSource = this.boMonBindingSource;
-            this.cbBoMon.DisplayMember = "TenBoMon";
-            this.cbBoMon.FormattingEnabled = true;
-            this.cbBoMon.Location = new System.Drawing.Point(104, 244);
-            this.cbBoMon.Name = "cbBoMon";
-            this.cbBoMon.Size = new System.Drawing.Size(220, 21);
-            this.cbBoMon.TabIndex = 14;
-            this.cbBoMon.ValueMember = "MaBoMon";
-            this.cbBoMon.SelectedIndexChanged += new System.EventHandler(this.cbBoMon_SelectedIndexChanged);
-            // 
-            // boMonBindingSource1
-            // 
-            this.boMonBindingSource1.DataMember = "BoMon";
-            this.boMonBindingSource1.DataSource = this.quanLyGiaoVienDataSet;
-            // 
-            // boMonBindingSource
-            // 
-            this.boMonBindingSource.DataMember = "BoMon";
-            this.boMonBindingSource.DataSource = this.quanLyGiaoVienDataSet;
             // 
             // txtLuongCoBan
             // 
             this.txtLuongCoBan.Location = new System.Drawing.Point(104, 284);
             this.txtLuongCoBan.Name = "txtLuongCoBan";
-            this.txtLuongCoBan.Size = new System.Drawing.Size(140, 20);
+            this.txtLuongCoBan.Size = new System.Drawing.Size(211, 20);
             this.txtLuongCoBan.TabIndex = 15;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(250, 378);
+            this.button2.Location = new System.Drawing.Point(110, 383);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;
@@ -260,7 +205,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(338, 378);
+            this.button3.Location = new System.Drawing.Point(240, 383);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -281,9 +226,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtLuongCoBan);
-            this.groupBox1.Controls.Add(this.cbBoMon);
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.cbChucVu);
+            this.groupBox1.Controls.Add(this.txtLuongCoBan);
             this.groupBox1.Controls.Add(this.txtSoDienThoai);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.cbGioiTinh);
@@ -299,30 +244,38 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(10, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 319);
+            this.groupBox1.Size = new System.Drawing.Size(366, 319);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
             // 
-            // boMonTableAdapter
-            // 
-            this.boMonTableAdapter.ClearBeforeFill = true;
-            // 
             // chucDanhBindingSource1
             // 
             this.chucDanhBindingSource1.DataMember = "ChucDanh";
-            this.chucDanhBindingSource1.DataSource = this.quanLyGiaoVienDataSet1;
             // 
-            // chucDanhTableAdapter
+            // cbChucVu
             // 
-            this.chucDanhTableAdapter.ClearBeforeFill = true;
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Location = new System.Drawing.Point(104, 203);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(211, 21);
+            this.cbChucVu.TabIndex = 16;
+            this.cbChucVu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(104, 241);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(211, 21);
+            this.comboBox2.TabIndex = 17;
             // 
             // ThemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(426, 418);
+            this.ClientSize = new System.Drawing.Size(412, 418);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
@@ -333,13 +286,10 @@
             this.Text = "Thêm Mới Hồ Sơ Giáo Viên";
             this.Load += new System.EventHandler(this.ThemGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyGiaoVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qLGVEntitiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -361,21 +311,16 @@
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSoDienThoai;
-        private System.Windows.Forms.ComboBox cbChucVu;
-        private System.Windows.Forms.ComboBox cbBoMon;
         private System.Windows.Forms.TextBox txtLuongCoBan;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.BindingSource qLGVEntitiesBindingSource;
-        private QuanLyGiaoVienDataSet quanLyGiaoVienDataSet;
         private System.Windows.Forms.BindingSource boMonBindingSource;
-        private QuanLyGiaoVienDataSetTableAdapters.BoMonTableAdapter boMonTableAdapter;
         private System.Windows.Forms.BindingSource boMonBindingSource1;
-        private QuanLyGiaoVienDataSet quanLyGiaoVienDataSet1;
         private System.Windows.Forms.BindingSource chucDanhBindingSource1;
         private System.Windows.Forms.BindingSource chucDanhBindingSource;
-        private QuanLyGiaoVienDataSetTableAdapters.ChucDanhTableAdapter chucDanhTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbChucVu;
     }
 }

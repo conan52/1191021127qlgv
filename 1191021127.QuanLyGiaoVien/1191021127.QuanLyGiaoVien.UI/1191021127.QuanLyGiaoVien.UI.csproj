@@ -102,11 +102,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\XoaGiaoVien.Designer.cs" />
-    <Compile Include="QuanLyGiaoVienDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form\XuatLuongGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,17 +167,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyGiaoVienDataSet.xsc">
-      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyGiaoVienDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyGiaoVienDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyGiaoVienDataSet.xss">
-      <DependentUpon>QuanLyGiaoVienDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
