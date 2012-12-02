@@ -64,32 +64,45 @@ namespace _1191021127.QuanLyGiaoVien.UI
             f.Show();
         }
 
-        private void inẤnToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void TimKiemGVToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new IN();
+            Form f = new TimKiemGiaoVien();
             f.MdiParent = this;
             f.Show();
         }
 
-        private void thóatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TimKiemLichGiangDayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form f = new TimKiemLichGiangDay();
+            f.MdiParent = this;
+            f.Show();
         }
 
-        private void theoHọcHàmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThongKeTheoHocViToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form f = new ThongKeChucDanh();
+            f.MdiParent = this;
+            f.Show();
         }
 
-        private void xuấtLươngGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThongKeTheoBoMonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XuatLuongGV xl = new XuatLuongGV();
-            xl.Show();
+            Form f = new ThongKeTheoBoMon();
+            f.MdiParent = this;
+            f.Show();
         }
 
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void XuatLuongGVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = new XuatLuongGV();
+            f.MdiParent = this;
+            f.Show();
         }
     }
 }
