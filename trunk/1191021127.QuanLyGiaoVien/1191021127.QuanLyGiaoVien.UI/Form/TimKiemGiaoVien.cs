@@ -29,20 +29,21 @@ namespace _1191021127.QuanLyGiaoVien.UI
         private void btTim_Click(object sender, EventArgs e)
         {
             string tenGV = tbTenGV.Text;
+            List<GiaoVien> gv = null;
+
+            if (tenGV != null && tenGV != "")
+            {
+                 gv = db.GiaoViens.Where(x => x.HoTen.Contains(tenGV) && x.TrangThai == true).ToList<GiaoVien>();
+            }
+
             string maGV = tbMaGV.Text;
+
             ChucDanh hocVi = (ChucDanh)cbHocVi.SelectedValue;
             ChucDanh hocHam = (ChucDanh)cbHocHam.SelectedValue;
 
-            List<GiaoVien> gv = db.GiaoViens.Where(x => x.HoTen.Contains(tenGV) && x.TrangThai == true).ToList<GiaoVien>();
-
-
-            if (checkboxMaGV.Checked && tbMaGV.Text != null)
-            {
-                int ma= int.Parse(tbMaGV.Text);
-                gv = db.GiaoViens.Where(x => x.MaGiaoVien == ma).ToList<GiaoVien>();
-            }
             if (checkBoxHocVi.Checked && cbHocVi.SelectedValue != null)
             {
+                if (gv == null) gv = db.GiaoViens.ToList<GiaoVien>();
                 ChucDanh m = (ChucDanh)cbHocVi.SelectedValue;
                 List<ChucDanh_GiaoVien> lcd  = db.ChucDanh_GiaoViens.Where(x => x.MaChucDanh == m.MaChucDanh).ToList<ChucDanh_GiaoVien>();
                 List<GiaoVien> gvs = new List<GiaoVien>();
@@ -55,6 +56,7 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
             if (checkBoxHocHam.Checked && cbHocHam.SelectedValue != null)
             {
+                if (gv == null) gv = db.GiaoViens.ToList<GiaoVien>();
                 ChucDanh m = (ChucDanh)cbHocHam.SelectedValue;
                 List<ChucDanh_GiaoVien> lcd = db.ChucDanh_GiaoViens.Where(x => x.MaChucDanh == m.MaChucDanh).ToList<ChucDanh_GiaoVien>();
                 List<GiaoVien> gvs = new List<GiaoVien>();
@@ -67,11 +69,25 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
             if (checkBoxBoMon.Checked && cbBoMon.SelectedValue != null)
             {
+                if (gv == null) gv = db.GiaoViens.ToList<GiaoVien>();
                 BoMon bm = (BoMon)cbBoMon.SelectedValue;
                 gv = gv.Where(x => x.MaGiaoVien == bm.MaBoMon).ToList<GiaoVien>();
             }
 
+
+            if (checkboxMaGV.Checked && tbMaGV.Text != null && maGV != null || maGV != "")
+            {
+                if (gv == null) gv = db.GiaoViens.ToList<GiaoVien>();
+                int ma = int.Parse(maGV);
+                gv = gv.Where(x => x.MaGiaoVien == ma).ToList<GiaoVien>();
+            }
+
             List<GiaoVienView> lGVView = new List<GiaoVienView>();
+            if (gv == null)
+            {
+                dataGridViewGV.DataSource = null;
+                return;
+            }
             for (int i = 0; i < gv.Count; i++)
             {
                 GiaoVienView gvview = new GiaoVienView();

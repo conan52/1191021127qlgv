@@ -19,3 +19,4 @@ C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\11910211
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.exe
 C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\1191021127.QuanLyGiaoVien.UI.pdb
+C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.UI\obj\x86\Debug\_1191021127.QuanLyGiaoVien.UI.TimKiemLichGiangDay.resources
