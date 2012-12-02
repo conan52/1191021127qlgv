@@ -50,9 +50,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chucDanhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cbBoMon = new System.Windows.Forms.ComboBox();
             this.cbChucVu = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.chucDanhBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cbChucDanh = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chucDanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boMonBindingSource)).BeginInit();
@@ -108,13 +110,13 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Số điẹn thoại :";
+            this.label5.Text = "Số điện thoại :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(12, 206);
+            this.label6.Location = new System.Drawing.Point(12, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 5;
@@ -124,7 +126,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(12, 284);
+            this.label7.Location = new System.Drawing.Point(12, 322);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 6;
@@ -134,7 +136,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(15, 244);
+            this.label8.Location = new System.Drawing.Point(15, 282);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 7;
@@ -184,7 +186,7 @@
             // 
             // txtLuongCoBan
             // 
-            this.txtLuongCoBan.Location = new System.Drawing.Point(104, 284);
+            this.txtLuongCoBan.Location = new System.Drawing.Point(104, 322);
             this.txtLuongCoBan.Name = "txtLuongCoBan";
             this.txtLuongCoBan.Size = new System.Drawing.Size(211, 20);
             this.txtLuongCoBan.TabIndex = 15;
@@ -193,7 +195,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(110, 383);
+            this.button2.Location = new System.Drawing.Point(133, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;
@@ -205,7 +207,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(240, 383);
+            this.button3.Location = new System.Drawing.Point(250, 411);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -218,7 +220,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(110, 19);
+            this.label9.Location = new System.Drawing.Point(82, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 22);
             this.label9.TabIndex = 19;
@@ -226,7 +228,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbChucDanh);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.cbBoMon);
             this.groupBox1.Controls.Add(this.cbChucVu);
             this.groupBox1.Controls.Add(this.txtLuongCoBan);
             this.groupBox1.Controls.Add(this.txtSoDienThoai);
@@ -244,37 +248,55 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(10, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 319);
+            this.groupBox1.Size = new System.Drawing.Size(338, 352);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
+            // 
+            // cbBoMon
+            // 
+            this.cbBoMon.FormattingEnabled = true;
+            this.cbBoMon.Location = new System.Drawing.Point(104, 282);
+            this.cbBoMon.Name = "cbBoMon";
+            this.cbBoMon.Size = new System.Drawing.Size(211, 21);
+            this.cbBoMon.TabIndex = 17;
+            // 
+            // cbChucVu
+            // 
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Location = new System.Drawing.Point(104, 241);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(211, 21);
+            this.cbChucVu.TabIndex = 16;
             // 
             // chucDanhBindingSource1
             // 
             this.chucDanhBindingSource1.DataMember = "ChucDanh";
             // 
-            // cbChucVu
+            // cbChucDanh
             // 
-            this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(104, 203);
-            this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(211, 21);
-            this.cbChucVu.TabIndex = 16;
+            this.cbChucDanh.FormattingEnabled = true;
+            this.cbChucDanh.Location = new System.Drawing.Point(104, 205);
+            this.cbChucDanh.Name = "cbChucDanh";
+            this.cbChucDanh.Size = new System.Drawing.Size(211, 21);
+            this.cbChucDanh.TabIndex = 19;
             // 
-            // comboBox2
+            // label10
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(104, 241);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(211, 21);
-            this.comboBox2.TabIndex = 17;
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label10.Location = new System.Drawing.Point(12, 208);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Chức danh";
             // 
             // ThemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(412, 418);
+            this.ClientSize = new System.Drawing.Size(379, 463);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
@@ -319,7 +341,9 @@
         private System.Windows.Forms.BindingSource boMonBindingSource1;
         private System.Windows.Forms.BindingSource chucDanhBindingSource1;
         private System.Windows.Forms.BindingSource chucDanhBindingSource;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbBoMon;
         private System.Windows.Forms.ComboBox cbChucVu;
+        private System.Windows.Forms.ComboBox cbChucDanh;
+        private System.Windows.Forms.Label label10;
     }
 }

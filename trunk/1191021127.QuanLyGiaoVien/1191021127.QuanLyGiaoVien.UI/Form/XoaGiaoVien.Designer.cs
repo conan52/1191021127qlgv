@@ -1,4 +1,4 @@
-﻿namespace _1191021127.QuanLyGiaoVien.UI.Common
+﻿namespace _1191021127.QuanLyGiaoVien.UI
 {
     partial class XoaGiaoVien
     {
@@ -28,21 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cbHoTen = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // cbHoTen
+            // 
+            this.cbHoTen.BackColor = System.Drawing.Color.White;
+            this.cbHoTen.FormattingEnabled = true;
+            this.cbHoTen.Location = new System.Drawing.Point(104, 67);
+            this.cbHoTen.Name = "cbHoTen";
+            this.cbHoTen.Size = new System.Drawing.Size(220, 21);
+            this.cbHoTen.TabIndex = 42;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(24, 56);
+            this.label1.Location = new System.Drawing.Point(12, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 41;
             this.label1.Text = "Họ tên :";
             // 
             // label9
@@ -50,56 +59,49 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(77, 19);
+            this.label9.Location = new System.Drawing.Point(83, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(200, 22);
-            this.label9.TabIndex = 20;
+            this.label9.TabIndex = 43;
             this.label9.Text = "Xóa Hồ Sơ Giáo Viên";
             // 
-            // comboBox1
+            // btnXoa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
-            this.comboBox1.TabIndex = 21;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnXoa.Location = new System.Drawing.Point(156, 119);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 45;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(202, 101);
+            this.button3.Location = new System.Drawing.Point(249, 119);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 23;
+            this.button3.TabIndex = 46;
             this.button3.Text = "Đóng";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(119, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // XoaGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(324, 157);
+            this.ClientSize = new System.Drawing.Size(360, 194);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.cbHoTen);
             this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
             this.Name = "XoaGiaoVien";
-            this.Text = "Xóa Hồ Sơ Giáo Viên";
+            this.Text = "XoaGiaoVien";
+            this.Load += new System.EventHandler(this.XoaGiaoVien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +109,10 @@
 
         #endregion
 
+        private System.Windows.Forms.ComboBox cbHoTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
     }
 }
