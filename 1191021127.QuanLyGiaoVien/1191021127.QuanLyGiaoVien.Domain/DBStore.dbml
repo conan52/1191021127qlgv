@@ -6,8 +6,8 @@
       <Column Name="TenBoMon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MaKhoa" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Column Name="TrungTamDaoTao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="BoMon_GiaoVien" Member="GiaoViens" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="GiaoVien" />
       <Association Name="BoMon_MonHoc" Member="MonHocs" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="MonHoc" />
+      <Association Name="BoMon_GiaoVien" Member="GiaoViens" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="GiaoVien" />
       <Association Name="Khoa_BoMon" Member="Khoa" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="Khoa" IsForeignKey="true" />
     </Type>
   </Table>
@@ -53,24 +53,6 @@
       <Column Name="MaChucVu" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenChucVu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="ChucVu_ChiTietChucVuGV" Member="ChiTietChucVuGVs" ThisKey="MaChucVu" OtherKey="MaChucVu" Type="ChiTietChucVuGV" />
-    </Type>
-  </Table>
-  <Table Name="dbo.GiaoVien" Member="GiaoViens">
-    <Type Name="GiaoVien">
-      <Column Name="MaGiaoVien" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="MaChucDanh" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="LuongCoBan" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MaBoMon" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="GiaoVien_ChiTietChucVuGV" Member="ChiTietChucVuGVs" ThisKey="MaGiaoVien" OtherKey="MaGV" Type="ChiTietChucVuGV" />
-      <Association Name="GiaoVien_ChucDanh_GiaoVien" Member="ChucDanh_GiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="ChucDanh_GiaoVien" />
-      <Association Name="GiaoVien_PhanCongGiaoVien" Member="PhanCongGiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="PhanCongGiaoVien" />
-      <Association Name="BoMon_GiaoVien" Member="BoMon" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="BoMon" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Khoa" Member="Khoas">
@@ -120,10 +102,10 @@
       <Column Name="HocKy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="NamHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SoTietDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="GiaoVien_PhanCongGiaoVien" Member="GiaoVien" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="GiaoVien" IsForeignKey="true" />
       <Association Name="LopHoc_PhanCongGiaoVien" Member="LopHoc" ThisKey="MaLopHoc" OtherKey="MaLopHoc" Type="LopHoc" IsForeignKey="true" />
       <Association Name="MonHoc_PhanCongGiaoVien" Member="MonHoc" ThisKey="MaMonHoc" OtherKey="MaMonHoc" Type="MonHoc" IsForeignKey="true" />
       <Association Name="PhongBan_PhanCongGiaoVien" Member="PhongBan" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhongBan" IsForeignKey="true" />
+      <Association Name="GiaoVien_PhanCongGiaoVien" Member="GiaoVien" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="GiaoVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PhongBan" Member="PhongBans">
@@ -131,6 +113,23 @@
       <Column Name="MaPhongBan" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenPhongBan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="PhongBan_PhanCongGiaoVien" Member="PhanCongGiaoViens" ThisKey="MaPhongBan" OtherKey="MaPhongBan" Type="PhanCongGiaoVien" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GiaoVien" Member="GiaoViens">
+    <Type Name="GiaoVien">
+      <Column Name="MaGiaoVien" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LuongCoBan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaBoMon" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="GiaoVien_ChiTietChucVuGV" Member="ChiTietChucVuGVs" ThisKey="MaGiaoVien" OtherKey="MaGV" Type="ChiTietChucVuGV" />
+      <Association Name="GiaoVien_ChucDanh_GiaoVien" Member="ChucDanh_GiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="ChucDanh_GiaoVien" />
+      <Association Name="GiaoVien_PhanCongGiaoVien" Member="PhanCongGiaoViens" ThisKey="MaGiaoVien" OtherKey="MaGiaoVien" Type="PhanCongGiaoVien" />
+      <Association Name="BoMon_GiaoVien" Member="BoMon" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="BoMon" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

@@ -1,6 +1,0 @@
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\bin\Debug\1191021127.QuanLyGiaoVien.Domain.dll
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\bin\Debug\1191021127.QuanLyGiaoVien.Domain.pdb
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\1191021127.QuanLyGiaoVien.Domain.dll
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\obj\Debug\1191021127.QuanLyGiaoVien.Domain.pdb
-C:\Users\NghiaTran\Desktop\QuanLySinhVien\wok\1191021127.QuanLyGiaoVien\1191021127.QuanLyGiaoVien.Domain\bin\Debug\1191021127.QuanLyGiaoVien.Domain.dll.config

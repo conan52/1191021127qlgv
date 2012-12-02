@@ -47,7 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewGV = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +57,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGV)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -237,7 +237,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dataGridViewGV);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(68, 288);
             this.groupBox2.Name = "groupBox2";
@@ -247,22 +247,22 @@
             this.groupBox2.Text = "Kết quả";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // dataGridView1
+            // dataGridViewGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.HoTen,
             this.GioiTinh,
             this.ChucVu,
             this.BoMon,
             this.Email});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(562, 224);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewGV.Location = new System.Drawing.Point(3, 19);
+            this.dataGridViewGV.Name = "dataGridViewGV";
+            this.dataGridViewGV.Size = new System.Drawing.Size(562, 224);
+            this.dataGridViewGV.TabIndex = 0;
             // 
             // ID
             // 
@@ -320,7 +320,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,7 +348,7 @@
         private System.Windows.Forms.CheckBox checkBoxHocHam;
         private System.Windows.Forms.CheckBox checkBoxHocVi;
         private System.Windows.Forms.CheckBox checkboxMaGV;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
