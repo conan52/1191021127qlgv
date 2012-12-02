@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxBoMon = new System.Windows.Forms.CheckBox();
+            this.checkBoxHocHam = new System.Windows.Forms.CheckBox();
+            this.checkBoxHocVi = new System.Windows.Forms.CheckBox();
+            this.checkboxMaGV = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btTim = new System.Windows.Forms.Button();
+            this.cbBoMon = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbHocHam = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbHocVi = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbMaGV = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbTenGV = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BoMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,21 +62,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkBoxBoMon);
+            this.groupBox1.Controls.Add(this.checkBoxHocHam);
+            this.groupBox1.Controls.Add(this.checkBoxHocVi);
+            this.groupBox1.Controls.Add(this.checkboxMaGV);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.btTim);
+            this.groupBox1.Controls.Add(this.cbBoMon);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbHocHam);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbHocVi);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbMaGV);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbTenGV);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(68, 65);
@@ -86,71 +86,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tìm kiếm";
             // 
-            // label1
+            // checkBoxBoMon
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên giáo viên :";
+            this.checkBoxBoMon.AutoSize = true;
+            this.checkBoxBoMon.Location = new System.Drawing.Point(330, 137);
+            this.checkBoxBoMon.Name = "checkBoxBoMon";
+            this.checkBoxBoMon.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxBoMon.TabIndex = 15;
+            this.checkBoxBoMon.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // checkBoxHocHam
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 23);
-            this.textBox1.TabIndex = 1;
+            this.checkBoxHocHam.AutoSize = true;
+            this.checkBoxHocHam.Location = new System.Drawing.Point(330, 111);
+            this.checkBoxHocHam.Name = "checkBoxHocHam";
+            this.checkBoxHocHam.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxHocHam.TabIndex = 14;
+            this.checkBoxHocHam.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // checkBoxHocVi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mã giáo viên :";
+            this.checkBoxHocVi.AutoSize = true;
+            this.checkBoxHocVi.Location = new System.Drawing.Point(330, 83);
+            this.checkBoxHocVi.Name = "checkBoxHocVi";
+            this.checkBoxHocVi.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxHocVi.TabIndex = 13;
+            this.checkBoxHocVi.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // checkboxMaGV
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 23);
-            this.textBox2.TabIndex = 3;
+            this.checkboxMaGV.AutoSize = true;
+            this.checkboxMaGV.Location = new System.Drawing.Point(330, 56);
+            this.checkboxMaGV.Name = "checkboxMaGV";
+            this.checkboxMaGV.Size = new System.Drawing.Size(15, 14);
+            this.checkboxMaGV.TabIndex = 12;
+            this.checkboxMaGV.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // label7
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Học vị :";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(109, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(167, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Số giáo viên tìm thấy  :  0";
             // 
-            // comboBox1
+            // btTim
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 24);
-            this.comboBox1.TabIndex = 5;
+            this.btTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTim.Location = new System.Drawing.Point(417, 74);
+            this.btTim.Name = "btTim";
+            this.btTim.Size = new System.Drawing.Size(118, 51);
+            this.btTim.TabIndex = 10;
+            this.btTim.Text = "Tìm";
+            this.btTim.UseVisualStyleBackColor = true;
+            this.btTim.Click += new System.EventHandler(this.btTim_Click);
             // 
-            // label4
+            // cbBoMon
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Học hàm :";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(112, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 24);
-            this.comboBox2.TabIndex = 7;
+            this.cbBoMon.FormattingEnabled = true;
+            this.cbBoMon.Location = new System.Drawing.Point(112, 132);
+            this.cbBoMon.Name = "cbBoMon";
+            this.cbBoMon.Size = new System.Drawing.Size(199, 24);
+            this.cbBoMon.TabIndex = 9;
             // 
             // label5
             // 
@@ -161,13 +159,71 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Bộ môn :";
             // 
-            // comboBox3
+            // cbHocHam
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(112, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(199, 24);
-            this.comboBox3.TabIndex = 9;
+            this.cbHocHam.FormattingEnabled = true;
+            this.cbHocHam.Location = new System.Drawing.Point(112, 105);
+            this.cbHocHam.Name = "cbHocHam";
+            this.cbHocHam.Size = new System.Drawing.Size(199, 24);
+            this.cbHocHam.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Học hàm :";
+            // 
+            // cbHocVi
+            // 
+            this.cbHocVi.FormattingEnabled = true;
+            this.cbHocVi.Location = new System.Drawing.Point(112, 78);
+            this.cbHocVi.Name = "cbHocVi";
+            this.cbHocVi.Size = new System.Drawing.Size(199, 24);
+            this.cbHocVi.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Học vị :";
+            // 
+            // tbMaGV
+            // 
+            this.tbMaGV.Location = new System.Drawing.Point(112, 50);
+            this.tbMaGV.Name = "tbMaGV";
+            this.tbMaGV.Size = new System.Drawing.Size(199, 23);
+            this.tbMaGV.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mã giáo viên :";
+            // 
+            // tbTenGV
+            // 
+            this.tbTenGV.Location = new System.Drawing.Point(112, 24);
+            this.tbTenGV.Name = "tbTenGV";
+            this.tbTenGV.Size = new System.Drawing.Size(199, 23);
+            this.tbTenGV.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên giáo viên :";
             // 
             // label6
             // 
@@ -178,16 +234,6 @@
             this.label6.Size = new System.Drawing.Size(238, 31);
             this.label6.TabIndex = 10;
             this.label6.Text = "Tìm kiếm giáo viên";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(417, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 51);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -200,25 +246,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kết quả";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(109, 174);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Số giáo viên tìm thấy  :  0";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(460, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 35);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -236,42 +263,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(562, 224);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(330, 56);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(330, 83);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(330, 111);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(330, 137);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -303,6 +294,16 @@
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(460, 537);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 35);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Đóng";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // TimKiemGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +316,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "TimKiemGiaoVien";
             this.Text = "Form tìm giáo viên";
+            this.Load += new System.EventHandler(this.TimKiemGiaoVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -328,24 +330,24 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btTim;
+        private System.Windows.Forms.ComboBox cbBoMon;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbHocHam;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbHocVi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbMaGV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTenGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxBoMon;
+        private System.Windows.Forms.CheckBox checkBoxHocHam;
+        private System.Windows.Forms.CheckBox checkBoxHocVi;
+        private System.Windows.Forms.CheckBox checkboxMaGV;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
