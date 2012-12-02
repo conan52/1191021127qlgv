@@ -45,7 +45,7 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
         private void phânCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new PhanCongGiaoVien();
+            Form f = new PhanCongChoGiaoVien();
             f.MdiParent = this;
             f.Show();
         }
