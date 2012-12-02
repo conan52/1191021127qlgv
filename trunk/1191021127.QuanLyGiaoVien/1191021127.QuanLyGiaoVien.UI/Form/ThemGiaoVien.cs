@@ -35,7 +35,6 @@ namespace _1191021127.QuanLyGiaoVien.UI.Common
             giaoVien.NgaySinh = DateTime.Now;
             giaoVien.Email = "trandainghia@gmail.com";
             giaoVien.SoDienThoai = 0987429755;
-            giaoVien.MaChucDanh = 2;
             giaoVien.LuongCoBan = 3999;
             giaoVien.MaBoMon = 1;
             giaoVien.TrangThai = true;

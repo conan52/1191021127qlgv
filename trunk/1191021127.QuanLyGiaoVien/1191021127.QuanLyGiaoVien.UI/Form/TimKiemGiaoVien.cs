@@ -28,9 +28,11 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             string tenGV = tbTenGV.Text;
             string maGV = tbMaGV.Text;
-            string hocVi = cbHocVi.SelectedValue.ToString();
-            string hocHam = cbHocHam.SelectedValue.ToString();
-            
+            ChucDanh hocVi = (ChucDanh)cbHocVi.SelectedValue;
+            ChucDanh hocHam = (ChucDanh)cbHocHam.SelectedValue;
+
+            List<GiaoVien> gv = db.GiaoViens.Where(x => x.HoTen.Contains(tenGV)).ToList<GiaoVien>();
+            dataGridViewGV.DataSource = gv;
         }
 
         private void TimKiemGiaoVien_Load(object sender, EventArgs e)
