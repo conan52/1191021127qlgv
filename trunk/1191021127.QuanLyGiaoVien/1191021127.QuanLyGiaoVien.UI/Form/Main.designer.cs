@@ -110,7 +110,7 @@
             // PhanCongGVToolStripMenuItem
             // 
             this.PhanCongGVToolStripMenuItem.Name = "PhanCongGVToolStripMenuItem";
-            this.PhanCongGVToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PhanCongGVToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.PhanCongGVToolStripMenuItem.Text = "Phân công";
             this.PhanCongGVToolStripMenuItem.Click += new System.EventHandler(this.thôngTinGiáoViênToolStripMenuItem_Click);
             // 
@@ -153,7 +153,7 @@
             this.ThongKeTheoHocViToolStripMenuItem,
             this.ThongKeTheoBoMonToolStripMenuItem});
             this.ThongKeToolStripMenuItem.Name = "ThongKeToolStripMenuItem";
-            this.ThongKeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ThongKeToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.ThongKeToolStripMenuItem.Text = "Giao Viên";
             // 
             // ThongKeTheoHocViToolStripMenuItem
@@ -209,6 +209,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quản lý hồ sơ giáo viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

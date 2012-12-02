@@ -33,23 +33,22 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.tbMaGV = new System.Windows.Forms.TextBox();
+            this.tbHoTen = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -68,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(198, 19);
+            this.label2.Location = new System.Drawing.Point(18, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 1;
@@ -80,12 +79,12 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 23);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.tbHoTen);
+            this.groupBox1.Controls.Add(this.tbMaGV);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(297, 22);
@@ -104,34 +103,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã GV :";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Chức vụ :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(192, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Bộ môn :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Khoa :";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -148,6 +119,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(621, 188);
             this.dataGridView1.TabIndex = 4;
             // 
+            // Lop
+            // 
+            this.Lop.HeaderText = "Lớp dạy";
+            this.Lop.Name = "Lop";
+            // 
+            // Mon
+            // 
+            this.Mon.HeaderText = "Môn dạy";
+            this.Mon.Name = "Mon";
+            // 
+            // Loai
+            // 
+            this.Loai.HeaderText = "Loại";
+            this.Loai.Name = "Loai";
+            // 
+            // SoTiet
+            // 
+            this.SoTiet.HeaderText = "Số tiết dạy";
+            this.SoTiet.Name = "SoTiet";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền (VND)";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -160,7 +156,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 382);
+            this.button1.Location = new System.Drawing.Point(106, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 33);
             this.button1.TabIndex = 6;
@@ -203,31 +199,6 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "VND";
             // 
-            // Lop
-            // 
-            this.Lop.HeaderText = "Lớp dạy";
-            this.Lop.Name = "Lop";
-            // 
-            // Mon
-            // 
-            this.Mon.HeaderText = "Môn dạy";
-            this.Mon.Name = "Mon";
-            // 
-            // Loai
-            // 
-            this.Loai.HeaderText = "Loại";
-            this.Loai.Name = "Loai";
-            // 
-            // SoTiet
-            // 
-            this.SoTiet.HeaderText = "Số tiết dạy";
-            this.SoTiet.Name = "SoTiet";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền (VND)";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -246,6 +217,22 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "VND";
             // 
+            // tbMaGV
+            // 
+            this.tbMaGV.Enabled = false;
+            this.tbMaGV.Location = new System.Drawing.Point(84, 23);
+            this.tbMaGV.Name = "tbMaGV";
+            this.tbMaGV.Size = new System.Drawing.Size(166, 23);
+            this.tbMaGV.TabIndex = 6;
+            // 
+            // tbHoTen
+            // 
+            this.tbHoTen.Enabled = false;
+            this.tbHoTen.Location = new System.Drawing.Point(84, 64);
+            this.tbHoTen.Name = "tbHoTen";
+            this.tbHoTen.Size = new System.Drawing.Size(166, 23);
+            this.tbHoTen.TabIndex = 7;
+            // 
             // XuatLuongGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,9 +250,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "XuatLuongGV";
             this.Text = "Xuất lương giáo viên";
+            this.Load += new System.EventHandler(this.XuatLuongGV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -281,9 +269,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lop;
@@ -299,5 +284,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbHoTen;
+        private System.Windows.Forms.TextBox tbMaGV;
     }
 }

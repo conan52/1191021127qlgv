@@ -8,124 +8,116 @@ using System.Text;
 using System.Windows.Forms;
 using _1191021127.QuanLyGiaoVien.Domain;
 using System.Data.Linq;
+using System.Collections;
 namespace _1191021127.QuanLyGiaoVien.UI
 {
     public partial class CapNhatGiaoVien : Form
     {
+        GiaoVien giaovienHienTai = null;
         public CapNhatGiaoVien()
         {
             InitializeComponent();
         }
         DBStoreDataContext db = new DBStoreDataContext();
-        public  GiaoVien GetInfoGiaoVien(long  pMaGiaoVien)
-        {
-            GiaoVien gv = new GiaoVien(); 
-            gv = (GiaoVien)db.GiaoViens.Where(x => x.MaGiaoVien == pMaGiaoVien && x.TrangThai == true).FirstOrDefault();
-            if (gv != null)
-            {
-                return gv;
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại giáo viên!");
-                return null;
-            }
-        }
-        public ChucVu GetInfoChucVu(long pMaChucVu)
-        {
-            ChucVu cv = new ChucVu(); 
-            cv = (ChucVu)db.ChucVus.Where(x => x.MaChucVu == pMaChucVu).FirstOrDefault();
-            if (cv != null)
-            {
-                return cv;
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại chức vụ!");
-                return null;
-            }
-        }
-        public ChucDanh GetInfoChucDanh(long pMaChucDanh)
-        {
-            ChucDanh cd = new ChucDanh();
-            cd = (ChucDanh)db.ChucDanhs.Where(x => x.MaChucDanh == pMaChucDanh).FirstOrDefault();
-            if (cd != null)
-            {
-                return cd;
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại chức danh!");
-                return null;
-            }
-        }
-        public BoMon GetInfoBoMon(long pMaBoMon)
-        {
-            BoMon bm = new BoMon();
-            bm = (BoMon)db.BoMons.Where(x => x.MaBoMon == pMaBoMon).FirstOrDefault();
-            if (bm != null)
-            {
-                return bm;
-            }
-            else
-            {
-                MessageBox.Show("Không tồn tại bộ môn!");
-                return null;
-            }
-        }
+        
         private void CapNhatGiaoVien_Load(object sender, EventArgs e)
         {
-            var lstgiaoVien = db.GetTable<GiaoVien>();
-            var lst = from gv in lstgiaoVien 
-                           where gv.TrangThai == true
-                           select gv;
-            cbHoTen.DataSource = lst;
+            ArrayList array = new ArrayList { "Nam", "Nữ" };
+            cbGioiTinh.DataSource = array;
 
-        }
-              private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-           
+            Table<ChucDanh> chucDanhs = db.GetTable<ChucDanh>();
+            cbChucDanh.DataSource = chucDanhs;
+
+            Table<ChucVu> chucVus = db.GetTable<ChucVu>();
+            cbChucVu.DataSource = chucVus;
+
+            Table<BoMon> boMons = db.GetTable<BoMon>();
+            cbBoMon.DataSource = boMons;
+
+
+            cbHoTen.DataSource = db.GiaoViens.Where(x=> x.TrangThai == true).ToList<GiaoVien>();
+            giaovienHienTai = (GiaoVien)cbHoTen.SelectedItem;
+
+            dtNgaySinh.Text = giaovienHienTai.NgaySinh.ToString();
+            cbGioiTinh.Text = giaovienHienTai.GioiTinh;
+            txtEmail.Text = giaovienHienTai.Email;
+            txtSoDienThoai.Text = giaovienHienTai.SoDienThoai.ToString();
+            txtLuongCoBan.Text = giaovienHienTai.LuongCoBan.ToString();
+
+            ChucDanh_GiaoVien ct = db.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == giaovienHienTai.MaGiaoVien).FirstOrDefault();
+           if(ct != null)
+            cbChucDanh.SelectedItem = ct.ChucDanh;
+
+            ChiTietChucVuGV chiTietChucVu = db.ChiTietChucVuGVs.Where(x => x.MaGV == giaovienHienTai.MaGiaoVien).FirstOrDefault();
+            if (chiTietChucVu != null)
+             cbChucVu.SelectedItem = chiTietChucVu.ChucVu ;
+
+            cbBoMon.SelectedItem = giaovienHienTai.BoMon;
 
         }
 
         private void cbChucDanh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Table<ChucDanh> chucDanhs = db.GetTable<ChucDanh>();
-            cbChucVu.DataSource = chucDanhs;
+        { 
+            if(giaovienHienTai != null)
+            {
+            ChucDanh_GiaoVien ct = db.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == giaovienHienTai.MaGiaoVien).FirstOrDefault();
+            if (ct == null) return;
+            db.ChucDanh_GiaoViens.InsertOnSubmit(ct);
+                ct.MaChucDanh = ((ChucDanh)cbChucDanh.SelectedItem).MaChucDanh;
+            ct.MaGiaoVien = giaovienHienTai.MaGiaoVien;
+            db.ChucDanh_GiaoViens.InsertOnSubmit(ct);
+            }
+           // db.SubmitChanges();
         }
 
         private void cbChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Table<ChucVu> chucVus = db.GetTable<ChucVu>();
-            cbChucVu.DataSource = chucVus;
+            if (giaovienHienTai != null)
+            {
+                ChiTietChucVuGV ct = db.ChiTietChucVuGVs.Where(x => x.MaGV == giaovienHienTai.MaGiaoVien).FirstOrDefault();
+               
+                db.ChiTietChucVuGVs.DeleteOnSubmit(ct);
+
+                ct.MaChucVu = ((ChucVu)cbChucVu.SelectedItem).MaChucVu;
+                ct.MaGV = giaovienHienTai.MaGiaoVien;
+
+                db.ChiTietChucVuGVs.InsertOnSubmit(ct);
+            }
+           // db.SubmitChanges();
         }
 
         private void cbBoMon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Table<BoMon> boMons = db.GetTable<BoMon>();
-            cbBoMon.DataSource = boMons;
+            if (giaovienHienTai != null)
+            giaovienHienTai.MaBoMon = ((BoMon)cbBoMon.SelectedItem).MaBoMon;
+           // db.SubmitChanges();
         }
 
         private void cbHoTen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GiaoVien gv = new GiaoVien();
-            gv = GetInfoGiaoVien (Int32.Parse(cbHoTen.SelectedValue.ToString()));
-
-            dtNgaySinh.Text = gv.NgaySinh.ToString();
-            cbGioiTinh.Text = gv.GioiTinh;
-            txtEmail.Text = gv.Email;
-            txtSoDienThoai.Text = gv.SoDienThoai.ToString();
-            txtLuongCoBan.Text = gv.LuongCoBan.ToString();
+            try
+            {
+                GiaoVien gv = (GiaoVien)cbHoTen.SelectedItem;
 
 
-            ChiTietChucVuGV cv = db.ChiTietChucVuGVs.Where(x => x.MaGV == gv.MaGiaoVien).FirstOrDefault();
-            cbChucVu.SelectedItem = cv.ChucVu;
-            ChucDanh_GiaoVien cd = gv.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == gv.MaGiaoVien).FirstOrDefault();
+                dtNgaySinh.Text = gv.NgaySinh.ToString();
+                cbGioiTinh.Text = gv.GioiTinh;
+                txtEmail.Text = gv.Email;
+                txtSoDienThoai.Text = gv.SoDienThoai.ToString();
+                txtLuongCoBan.Text = gv.LuongCoBan.ToString();
 
-            cbChucDanh.SelectedItem = cd.ChucDanh;
-            BoMon bm = gv.BoMon;
-            cbBoMon.DataSource = bm;
 
+                ChiTietChucVuGV cv = db.ChiTietChucVuGVs.Where(x => x.MaGV == gv.MaGiaoVien).FirstOrDefault();
+                if (cv != null)
+                    cbChucVu.SelectedItem = cv.ChucVu;
+                ChucDanh_GiaoVien cd = gv.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == gv.MaGiaoVien).FirstOrDefault();
+                if (cd != null)
+                    cbChucDanh.SelectedItem = cd.ChucDanh;
+
+                BoMon bm = gv.BoMon;
+                cbBoMon.SelectedItem = bm;
+            }
+            catch (Exception ex) { }
 
 
         }
@@ -134,41 +126,37 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             try
             {
-                GiaoVien giaoVien = db.GiaoViens.Single(x => x.MaGiaoVien.Equals(cbHoTen.SelectedValue.ToString())); 
-                giaoVien.HoTen = cbHoTen.SelectedText;
-                giaoVien.GioiTinh = cbGioiTinh.SelectedText;
-                giaoVien.NgaySinh = DateTime.Now;
-                giaoVien.Email = txtEmail.Text;
-                giaoVien.SoDienThoai = Int32.Parse(txtSoDienThoai.Text);
-                giaoVien.LuongCoBan = Int32.Parse(txtLuongCoBan.Text);
-                giaoVien.MaBoMon = Int32.Parse(cbBoMon.SelectedValue.ToString());
-                giaoVien.TrangThai = true;
+                if( txtEmail.Text != null &&  txtEmail.Text != "") 
+                giaovienHienTai.Email = txtEmail.Text;
+                if(txtSoDienThoai.Text != null && txtSoDienThoai.Text != "")
+                giaovienHienTai.SoDienThoai = Int32.Parse(txtSoDienThoai.Text);
+                if (txtLuongCoBan.Text != null && txtLuongCoBan.Text != "")
+                giaovienHienTai.LuongCoBan = Int32.Parse(txtLuongCoBan.Text);
+     
 
-                db.SubmitChanges();
-
-                ChiTietChucVuGV chiTiet = new ChiTietChucVuGV();
-                long pMaGiaoVien = db.GiaoViens.Count();
-                chiTiet.MaChucVu = Int32.Parse(cbChucVu.SelectedValue.ToString());
-                chiTiet.MaGV = pMaGiaoVien;
-
-                db.ChiTietChucVuGVs.InsertOnSubmit(chiTiet);
-                db.SubmitChanges();
-
-                ChucDanh_GiaoVien chiTiet2 = new ChucDanh_GiaoVien();
-                chiTiet2.MaChucDanh = Int32.Parse(cbChucDanh.SelectedValue.ToString());
-                chiTiet.MaGV = pMaGiaoVien;
-
-                db.ChucDanh_GiaoViens.InsertOnSubmit(chiTiet2);
+            
                 db.SubmitChanges();
 
                 MessageBox.Show("Quá trình cập nhật thành công!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
-            catch (Exception  )
+            catch (Exception ex )
             { 
-                MessageBox.Show("Qúa trình cập nhật thất bại!", "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Qúa trình cập nhật thất bại! \n Lỗi : " + ex.ToString(), "Giáo viên - Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void cbGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (giaovienHienTai != null && cbGioiTinh.SelectedItem != null)
+            giaovienHienTai.GioiTinh = (string)cbGioiTinh.SelectedItem;
+        }
+
+        private void dtNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+            if (giaovienHienTai != null)
+            giaovienHienTai.NgaySinh = dtNgaySinh.Value;
         }
     }
 }
