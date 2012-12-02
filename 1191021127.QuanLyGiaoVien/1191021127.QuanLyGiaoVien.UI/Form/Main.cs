@@ -75,5 +75,10 @@ namespace _1191021127.QuanLyGiaoVien.UI
         {
             Application.Exit();
         }
+
+        private void theoHọcHàmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
