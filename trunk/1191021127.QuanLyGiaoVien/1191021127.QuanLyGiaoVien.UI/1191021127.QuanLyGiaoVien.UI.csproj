@@ -94,10 +94,6 @@
     <Compile Include="Form\ThemGiaoVien.designer.cs">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\XoaGiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\XoaGiaoVien.Designer.cs" />
     <Compile Include="Form\XuatLuongGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +117,10 @@
     </Compile>
     <Compile Include="Form\ThongKeChucDanh.Designer.cs">
       <DependentUpon>ThongKeChucDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaGiaoVien.cs" />
+    <Compile Include="XoaGiaoVien.Designer.cs">
+      <DependentUpon>XoaGiaoVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\CapNhatGiaoVien.resx">
       <DependentUpon>CapNhatGiaoVien.cs</DependentUpon>
@@ -164,7 +164,9 @@
     <EmbeddedResource Include="Form\ThemGiaoVien.resx">
       <DependentUpon>ThemGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\XoaGiaoVien.resx" />
+    <EmbeddedResource Include="XoaGiaoVien.resx">
+      <DependentUpon>XoaGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\QLGVEntities.datasource" />
