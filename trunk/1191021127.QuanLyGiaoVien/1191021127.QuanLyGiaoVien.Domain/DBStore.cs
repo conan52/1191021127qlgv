@@ -1,5 +1,13 @@
 namespace _1191021127.QuanLyGiaoVien.Domain
 {
+    partial class Khoa
+    {
+        public override string ToString()
+        {
+            return this.TenKhoa;
+        }
+    }
+
     partial class BoMon
     {
         public override string ToString()
