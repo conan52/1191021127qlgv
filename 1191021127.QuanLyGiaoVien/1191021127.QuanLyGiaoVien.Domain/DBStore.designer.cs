@@ -36,12 +36,18 @@ namespace _1191021127.QuanLyGiaoVien.Domain
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
+    partial void InsertChiTietChucVuGV(ChiTietChucVuGV instance);
+    partial void UpdateChiTietChucVuGV(ChiTietChucVuGV instance);
+    partial void DeleteChiTietChucVuGV(ChiTietChucVuGV instance);
     partial void InsertChucDanh(ChucDanh instance);
     partial void UpdateChucDanh(ChucDanh instance);
     partial void DeleteChucDanh(ChucDanh instance);
     partial void InsertChucDanh_GiaoVien(ChucDanh_GiaoVien instance);
     partial void UpdateChucDanh_GiaoVien(ChucDanh_GiaoVien instance);
     partial void DeleteChucDanh_GiaoVien(ChucDanh_GiaoVien instance);
+    partial void InsertChucVu(ChucVu instance);
+    partial void UpdateChucVu(ChucVu instance);
+    partial void DeleteChucVu(ChucVu instance);
     partial void InsertGiaoVien(GiaoVien instance);
     partial void UpdateGiaoVien(GiaoVien instance);
     partial void DeleteGiaoVien(GiaoVien instance);
@@ -111,6 +117,14 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 			}
 		}
 		
+		public System.Data.Linq.Table<ChiTietChucVuGV> ChiTietChucVuGVs
+		{
+			get
+			{
+				return this.GetTable<ChiTietChucVuGV>();
+			}
+		}
+		
 		public System.Data.Linq.Table<ChucDanh> ChucDanhs
 		{
 			get
@@ -124,6 +138,14 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 			get
 			{
 				return this.GetTable<ChucDanh_GiaoVien>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ChucVu> ChucVus
+		{
+			get
+			{
+				return this.GetTable<ChucVu>();
 			}
 		}
 		
@@ -614,6 +636,198 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChiTietChucVuGV")]
+	public partial class ChiTietChucVuGV : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _MaGV;
+		
+		private long _MaChucVu;
+		
+		private string _GhiChu;
+		
+		private EntityRef<ChucVu> _ChucVu;
+		
+		private EntityRef<GiaoVien> _GiaoVien;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaGVChanging(long value);
+    partial void OnMaGVChanged();
+    partial void OnMaChucVuChanging(long value);
+    partial void OnMaChucVuChanged();
+    partial void OnGhiChuChanging(string value);
+    partial void OnGhiChuChanged();
+    #endregion
+		
+		public ChiTietChucVuGV()
+		{
+			this._ChucVu = default(EntityRef<ChucVu>);
+			this._GiaoVien = default(EntityRef<GiaoVien>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaGV", DbType="BigInt NOT NULL", IsPrimaryKey=true)]
+		public long MaGV
+		{
+			get
+			{
+				return this._MaGV;
+			}
+			set
+			{
+				if ((this._MaGV != value))
+				{
+					if (this._GiaoVien.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaGVChanging(value);
+					this.SendPropertyChanging();
+					this._MaGV = value;
+					this.SendPropertyChanged("MaGV");
+					this.OnMaGVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChucVu", DbType="BigInt NOT NULL", IsPrimaryKey=true)]
+		public long MaChucVu
+		{
+			get
+			{
+				return this._MaChucVu;
+			}
+			set
+			{
+				if ((this._MaChucVu != value))
+				{
+					if (this._ChucVu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaChucVuChanging(value);
+					this.SendPropertyChanging();
+					this._MaChucVu = value;
+					this.SendPropertyChanged("MaChucVu");
+					this.OnMaChucVuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(50)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this.OnGhiChuChanging(value);
+					this.SendPropertyChanging();
+					this._GhiChu = value;
+					this.SendPropertyChanged("GhiChu");
+					this.OnGhiChuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_ChiTietChucVuGV", Storage="_ChucVu", ThisKey="MaChucVu", OtherKey="MaChucVu", IsForeignKey=true)]
+		public ChucVu ChucVu
+		{
+			get
+			{
+				return this._ChucVu.Entity;
+			}
+			set
+			{
+				ChucVu previousValue = this._ChucVu.Entity;
+				if (((previousValue != value) 
+							|| (this._ChucVu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ChucVu.Entity = null;
+						previousValue.ChiTietChucVuGVs.Remove(this);
+					}
+					this._ChucVu.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTietChucVuGVs.Add(this);
+						this._MaChucVu = value.MaChucVu;
+					}
+					else
+					{
+						this._MaChucVu = default(long);
+					}
+					this.SendPropertyChanged("ChucVu");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GiaoVien_ChiTietChucVuGV", Storage="_GiaoVien", ThisKey="MaGV", OtherKey="MaGiaoVien", IsForeignKey=true)]
+		public GiaoVien GiaoVien
+		{
+			get
+			{
+				return this._GiaoVien.Entity;
+			}
+			set
+			{
+				GiaoVien previousValue = this._GiaoVien.Entity;
+				if (((previousValue != value) 
+							|| (this._GiaoVien.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._GiaoVien.Entity = null;
+						previousValue.ChiTietChucVuGVs.Remove(this);
+					}
+					this._GiaoVien.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTietChucVuGVs.Add(this);
+						this._MaGV = value.MaGiaoVien;
+					}
+					else
+					{
+						this._MaGV = default(long);
+					}
+					this.SendPropertyChanged("GiaoVien");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChucDanh")]
 	public partial class ChucDanh : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -968,6 +1182,120 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChucVu")]
+	public partial class ChucVu : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _MaChucVu;
+		
+		private string _TenChucVu;
+		
+		private EntitySet<ChiTietChucVuGV> _ChiTietChucVuGVs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaChucVuChanging(long value);
+    partial void OnMaChucVuChanged();
+    partial void OnTenChucVuChanging(string value);
+    partial void OnTenChucVuChanged();
+    #endregion
+		
+		public ChucVu()
+		{
+			this._ChiTietChucVuGVs = new EntitySet<ChiTietChucVuGV>(new Action<ChiTietChucVuGV>(this.attach_ChiTietChucVuGVs), new Action<ChiTietChucVuGV>(this.detach_ChiTietChucVuGVs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChucVu", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long MaChucVu
+		{
+			get
+			{
+				return this._MaChucVu;
+			}
+			set
+			{
+				if ((this._MaChucVu != value))
+				{
+					this.OnMaChucVuChanging(value);
+					this.SendPropertyChanging();
+					this._MaChucVu = value;
+					this.SendPropertyChanged("MaChucVu");
+					this.OnMaChucVuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenChucVu", DbType="NVarChar(50)")]
+		public string TenChucVu
+		{
+			get
+			{
+				return this._TenChucVu;
+			}
+			set
+			{
+				if ((this._TenChucVu != value))
+				{
+					this.OnTenChucVuChanging(value);
+					this.SendPropertyChanging();
+					this._TenChucVu = value;
+					this.SendPropertyChanged("TenChucVu");
+					this.OnTenChucVuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_ChiTietChucVuGV", Storage="_ChiTietChucVuGVs", ThisKey="MaChucVu", OtherKey="MaChucVu")]
+		public EntitySet<ChiTietChucVuGV> ChiTietChucVuGVs
+		{
+			get
+			{
+				return this._ChiTietChucVuGVs;
+			}
+			set
+			{
+				this._ChiTietChucVuGVs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ChiTietChucVuGVs(ChiTietChucVuGV entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = this;
+		}
+		
+		private void detach_ChiTietChucVuGVs(ChiTietChucVuGV entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GiaoVien")]
 	public partial class GiaoVien : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -993,6 +1321,8 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 		private System.Nullable<long> _MaBoMon;
 		
 		private System.Nullable<bool> _TrangThai;
+		
+		private EntitySet<ChiTietChucVuGV> _ChiTietChucVuGVs;
 		
 		private EntitySet<ChucDanh_GiaoVien> _ChucDanh_GiaoViens;
 		
@@ -1028,6 +1358,7 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 		
 		public GiaoVien()
 		{
+			this._ChiTietChucVuGVs = new EntitySet<ChiTietChucVuGV>(new Action<ChiTietChucVuGV>(this.attach_ChiTietChucVuGVs), new Action<ChiTietChucVuGV>(this.detach_ChiTietChucVuGVs));
 			this._ChucDanh_GiaoViens = new EntitySet<ChucDanh_GiaoVien>(new Action<ChucDanh_GiaoVien>(this.attach_ChucDanh_GiaoViens), new Action<ChucDanh_GiaoVien>(this.detach_ChucDanh_GiaoViens));
 			this._PhanCongGiaoViens = new EntitySet<PhanCongGiaoVien>(new Action<PhanCongGiaoVien>(this.attach_PhanCongGiaoViens), new Action<PhanCongGiaoVien>(this.detach_PhanCongGiaoViens));
 			this._BoMon = default(EntityRef<BoMon>);
@@ -1238,6 +1569,19 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GiaoVien_ChiTietChucVuGV", Storage="_ChiTietChucVuGVs", ThisKey="MaGiaoVien", OtherKey="MaGV")]
+		public EntitySet<ChiTietChucVuGV> ChiTietChucVuGVs
+		{
+			get
+			{
+				return this._ChiTietChucVuGVs;
+			}
+			set
+			{
+				this._ChiTietChucVuGVs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GiaoVien_ChucDanh_GiaoVien", Storage="_ChucDanh_GiaoViens", ThisKey="MaGiaoVien", OtherKey="MaGiaoVien")]
 		public EntitySet<ChucDanh_GiaoVien> ChucDanh_GiaoViens
 		{
@@ -1316,6 +1660,18 @@ namespace _1191021127.QuanLyGiaoVien.Domain
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_ChiTietChucVuGVs(ChiTietChucVuGV entity)
+		{
+			this.SendPropertyChanging();
+			entity.GiaoVien = this;
+		}
+		
+		private void detach_ChiTietChucVuGVs(ChiTietChucVuGV entity)
+		{
+			this.SendPropertyChanging();
+			entity.GiaoVien = null;
 		}
 		
 		private void attach_ChucDanh_GiaoViens(ChucDanh_GiaoVien entity)
