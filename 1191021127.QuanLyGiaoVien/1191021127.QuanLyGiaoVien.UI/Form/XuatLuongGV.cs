@@ -32,6 +32,25 @@ namespace _1191021127.QuanLyGiaoVien.UI
                 {
                     tbMaGV.Text = gv.MaGiaoVien.ToString();
                     tbHoTen.Text = gv.HoTen;
+                    ChucDanh_GiaoVien xx = db.ChucDanh_GiaoViens.Where(x => x.MaGiaoVien == gv.MaGiaoVien).FirstOrDefault();
+                    if (xx != null)
+                    {
+                        tbHSL.Text = xx.ChucDanh.HeSoLuong.ToString();
+                    }
+                    tbLuongCoBan.Text = gv.LuongCoBan.ToString();
+                    List<PhanCongGiaoVien> lpc = db.PhanCongGiaoViens.Where(x => x.MaGiaoVien == gv.MaGiaoVien).ToList<PhanCongGiaoVien>();
+                    int soTietDay = 0;
+                    
+                    for (int i = 0; i < lpc.Count; i++)
+                    {
+                        soTietDay += (int)lpc[i].SoTietDay;
+                    }
+
+                    tbSoTiet.Text = soTietDay.ToString();
+                   
+                    float tongLuong =(float)(gv.LuongCoBan + xx.ChucDanh.HeSoLuong * soTietDay);
+
+                    tbTongLuong.Text = tongLuong.ToString();
                 }
             }
         }
@@ -39,6 +58,11 @@ namespace _1191021127.QuanLyGiaoVien.UI
         private void XuatLuongGV_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
