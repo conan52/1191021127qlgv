@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DateTimePicker dtNam;
+            System.Windows.Forms.DateTimePicker xNam;
             this.cbLop = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -36,27 +36,37 @@
             this.cbMonHoc = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbSOtiet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbPhongBan = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbHoTen = new System.Windows.Forms.TextBox();
+            this.txtMaGiaoVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtMaGiaoVien = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbHocKy = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.cbPhongBan = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            dtNam = new System.Windows.Forms.DateTimePicker();
+            this.tbMaPC = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            xNam = new System.Windows.Forms.DateTimePicker();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // xNam
+            // 
+            xNam.CustomFormat = "yyyy";
+            xNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            xNam.Location = new System.Drawing.Point(484, 86);
+            xNam.Name = "xNam";
+            xNam.Size = new System.Drawing.Size(122, 20);
+            xNam.TabIndex = 41;
             // 
             // cbLop
             // 
@@ -119,7 +129,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.tbSOtiet);
             this.groupBox2.Controls.Add(this.cbLop);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -135,39 +145,57 @@
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết phân công";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button4
+            // tbSOtiet
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(381, 400);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 33);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "Làm mới";
-            this.button4.UseVisualStyleBackColor = true;
+            this.tbSOtiet.Location = new System.Drawing.Point(153, 156);
+            this.tbSOtiet.Name = "tbSOtiet";
+            this.tbSOtiet.Size = new System.Drawing.Size(122, 20);
+            this.tbSOtiet.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(79, 115);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Phòng ban :";
+            // 
+            // cbPhongBan
+            // 
+            this.cbPhongBan.FormattingEnabled = true;
+            this.cbPhongBan.Location = new System.Drawing.Point(153, 112);
+            this.cbPhongBan.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPhongBan.Name = "cbPhongBan";
+            this.cbPhongBan.Size = new System.Drawing.Size(212, 21);
+            this.cbPhongBan.TabIndex = 7;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(573, 400);
+            this.button3.Location = new System.Drawing.Point(450, 400);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 33);
             this.button3.TabIndex = 38;
-            this.button3.Text = "Xóa phân công";
+            this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(189, 400);
+            this.button5.Location = new System.Drawing.Point(224, 400);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(175, 33);
             this.button5.TabIndex = 37;
-            this.button5.Text = "Phân công lại";
+            this.button5.Text = "Cập nhật";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -177,8 +205,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 33);
             this.button2.TabIndex = 36;
-            this.button2.Text = "Thêm phân công";
+            this.button2.Text = "Thêm";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label12
             // 
@@ -192,7 +221,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbHoTen);
             this.groupBox1.Controls.Add(this.txtMaGiaoVien);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -205,6 +234,22 @@
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn giáo viên";
+            // 
+            // tbHoTen
+            // 
+            this.tbHoTen.Enabled = false;
+            this.tbHoTen.Location = new System.Drawing.Point(126, 117);
+            this.tbHoTen.Name = "tbHoTen";
+            this.tbHoTen.Size = new System.Drawing.Size(199, 20);
+            this.tbHoTen.TabIndex = 5;
+            // 
+            // txtMaGiaoVien
+            // 
+            this.txtMaGiaoVien.Location = new System.Drawing.Point(126, 76);
+            this.txtMaGiaoVien.Name = "txtMaGiaoVien";
+            this.txtMaGiaoVien.Size = new System.Drawing.Size(199, 20);
+            this.txtMaGiaoVien.TabIndex = 5;
+            this.txtMaGiaoVien.TextChanged += new System.EventHandler(this.txtMaGiaoVien_TextChanged);
             // 
             // label3
             // 
@@ -239,7 +284,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(768, 400);
+            this.button6.Location = new System.Drawing.Point(674, 400);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(175, 33);
@@ -258,21 +303,6 @@
             this.label11.TabIndex = 30;
             this.label11.Text = "Học kì :";
             // 
-            // txtMaGiaoVien
-            // 
-            this.txtMaGiaoVien.Location = new System.Drawing.Point(126, 76);
-            this.txtMaGiaoVien.Name = "txtMaGiaoVien";
-            this.txtMaGiaoVien.Size = new System.Drawing.Size(199, 20);
-            this.txtMaGiaoVien.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(126, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 5;
-            // 
             // cbHocKy
             // 
             this.cbHocKy.FormattingEnabled = true;
@@ -282,40 +312,22 @@
             this.cbHocKy.Size = new System.Drawing.Size(58, 21);
             this.cbHocKy.TabIndex = 4;
             // 
-            // dtNam
+            // tbMaPC
             // 
-            dtNam.CustomFormat = "yyyy";
-            dtNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dtNam.Location = new System.Drawing.Point(484, 86);
-            dtNam.Name = "dtNam";
-            dtNam.Size = new System.Drawing.Size(122, 20);
-            dtNam.TabIndex = 41;
+            this.tbMaPC.Location = new System.Drawing.Point(158, 115);
+            this.tbMaPC.Name = "tbMaPC";
+            this.tbMaPC.Size = new System.Drawing.Size(199, 20);
+            this.tbMaPC.TabIndex = 6;
             // 
-            // textBox2
+            // label7
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // cbPhongBan
-            // 
-            this.cbPhongBan.FormattingEnabled = true;
-            this.cbPhongBan.Location = new System.Drawing.Point(153, 112);
-            this.cbPhongBan.Margin = new System.Windows.Forms.Padding(4);
-            this.cbPhongBan.Name = "cbPhongBan";
-            this.cbPhongBan.Size = new System.Drawing.Size(212, 21);
-            this.cbPhongBan.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 115);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Phòng ban :";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(77, 118);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Mã phân công: ";
             // 
             // ChonPhanCongGiaoVien
             // 
@@ -323,11 +335,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(965, 489);
-            this.Controls.Add(dtNam);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbMaPC);
+            this.Controls.Add(xNam);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.cbHocKy);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
@@ -356,7 +369,6 @@
         private System.Windows.Forms.ComboBox cbMonHoc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
@@ -367,12 +379,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbHoTen;
         private System.Windows.Forms.TextBox txtMaGiaoVien;
         private System.Windows.Forms.ComboBox cbHocKy;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbSOtiet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbPhongBan;
+        private System.Windows.Forms.TextBox tbMaPC;
+        private System.Windows.Forms.Label label7;
 
     }
 }
