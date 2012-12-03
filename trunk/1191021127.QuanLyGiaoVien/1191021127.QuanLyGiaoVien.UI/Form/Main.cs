@@ -51,7 +51,7 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
         private void thôngTinGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new TimKiemGiaoVien();
+            Form f = new ChonPhanCongGiaoVien();
             f.MdiParent = this;
             f.Show();
         }
@@ -106,9 +106,9 @@ namespace _1191021127.QuanLyGiaoVien.UI
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Form dangNhap = new DangNhap();
-            dangNhap.MdiParent = this;
-            dangNhap.Show();
+            //Form dangNhap = new DangNhap();
+            //dangNhap.MdiParent = this;
+            //dangNhap.Show();
         }
     }
 }

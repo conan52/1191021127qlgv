@@ -197,7 +197,6 @@
             // 
             // tbTongLuong
             // 
-            this.tbTongLuong.Enabled = false;
             this.tbTongLuong.Location = new System.Drawing.Point(179, 169);
             this.tbTongLuong.Name = "tbTongLuong";
             this.tbTongLuong.Size = new System.Drawing.Size(112, 23);
